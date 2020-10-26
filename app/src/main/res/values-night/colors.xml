@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#23A7d8</color>
+    <color name="colorPrimaryDark">@color/colorPrimaryVariant</color>
+    <color name="colorAccent">#4CAF50</color>
+    <color name="card_background">#ffffff</color>
+
+    <color name="background">#2d2d2d</color>
+    <color name="colorPrimaryVariant">#4bb6ef</color>
+    <color name="colorSecondaryVariant">#F44336</color>
+    <color name="colorAccentVariant">#49B34E</color>
+    <color name="card_background_dark">@color/dark_background</color>
+
+    <color name="not_pressed">@color/background</color>
+    <color name="pressed">@color/dark_background</color>
+    <color name="text_pressed">#ffffff</color>
+    <color name="text_not_pressed">#C8BFBF</color>
+    <color name="navigation_tile_color">@color/dark_background</color>
+    <color name="product_individual">@color/dark_background</color>
+    <color name="button_text">#000000</color>
+    <color name="button_color">@color/dark_background</color>
+    <color name="text_color">#ffffff</color>
+    <color name="cardviewColor">@color/dark_background</color>
+    <color name="drawablle_color">#ffffff</color>
+    <color name="edittext_tint">@color/colorPrimary</color>
+
+    <color name="white">#ffffff</color>
+    <color name="red">#F44336</color>
+    <color name="transparent">#0000ffff</color>
+    <color name="light_grey">#ECEFF1</color>
+    <color name="grey">#D3D3D3</color>
+    <color name="green">#4CAF50</color>
+    <color name="creamy">#F0F5F8</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="dark_background">#FF424242</color>
+
+
+
+
+</resources>

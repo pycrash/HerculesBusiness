@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:src="@drawable/back_arrow"
+        app:tint="@color/text_color" />
+    <TextView
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/page_titles"
+        android:textStyle="bold"
+        android:layout_below="@+id/back_login"
+        android:textColor="@color/text_color"
+        android:text="Update Customer"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standard_margin"
+            android:padding="@dimen/standard_margin"
+            app:cardBackgroundColor="@color/cardviewColor"
+            app:cardCornerRadius="@dimen/standard_margin"
+            app:cardElevation="@dimen/cardview_default_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/standard_margin"
+                        android:text="Email Address"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/secondary_text"
+
+                        android:textStyle="bold" />
+
+
+                    <!-- Phone no edit text-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/ed_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/standard_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:paddingEnd="@dimen/activity_vertical_margin"
+                            android:backgroundTint="@color/edittext_tint"
+
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_color"
+                            android:textSize="@dimen/text_input" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/update_customer_linear_layout"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/customer_details"
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/activity_vertical_margin"
+                        android:background="@drawable/rectangle_dark"
+                        android:textColorHint="#ffffff"
+                        android:textColor="@color/text_color"
+                        android:text="Ashutosh Jha\n+918569989966"
+                        android:textSize="@dimen/modal_text"
+                        android:layout_height="wrap_content"
+                        />
+                <LinearLayout
+
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:id="@+id/edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <!-- Phone no edit text-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/standard_margin"
+                        android:text="Company Name"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/secondary_text"
+
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/ed_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:inputType="textPersonName"
+                            android:maxLength="20"
+                            android:paddingStart="@dimen/standard_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:paddingEnd="@dimen/activity_vertical_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_color"
+                            android:backgroundTint="@color/edittext_tint"
+                            android:textSize="@dimen/text_input" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/phone_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <!-- Indian flag with country code edit text which is disabled -->
+
+                    <!-- Phone no edit text-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/standard_margin"
+                        android:text="Phone Number"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/secondary_text"
+
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/ed_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:paddingStart="@dimen/standard_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:paddingEnd="@dimen/activity_vertical_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:textColor="@color/text_color"
+                            android:backgroundTint="@color/edittext_tint"
+                            android:textColorHint="@color/text_color"
+                            android:textSize="@dimen/text_input" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/standard_margin"
+                        android:text="Address"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/secondary_text"
+                        android:textStyle="bold" />
+
+
+                    <!-- Phone no edit text-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/ed_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/standard_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:paddingEnd="@dimen/activity_vertical_margin"
+                            android:backgroundTint="@color/edittext_tint"
+                            android:inputType="textPostalAddress"
+                            android:lines="3"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_color"
+                            android:textSize="@dimen/text_input" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/standard_margin"
+                        android:text="Pincode"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/secondary_text"
+
+                        android:textStyle="bold" />
+
+
+                    <!-- Phone no edit text-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_pincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/ed_pincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/standard_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:paddingEnd="@dimen/activity_vertical_margin"
+                            android:backgroundTint="@color/edittext_tint"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_color"
+                            android:textSize="@dimen/text_input" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/standard_margin"
+                        android:text="State"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/secondary_text"
+
+                        android:textStyle="bold" />
+
+
+                    <!-- Phone no edit text-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/ed_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/standard_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:paddingEnd="@dimen/activity_vertical_margin"
+                            android:backgroundTint="@color/edittext_tint"
+
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_color"
+                            android:textSize="@dimen/text_input" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/standard_margin"
+                        android:text="Contact Name"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/secondary_text"
+
+                        android:textStyle="bold" />
+
+
+                    <!-- Phone no edit text-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_contact_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/ed_contact_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/standard_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:paddingEnd="@dimen/activity_vertical_margin"
+                            android:backgroundTint="@color/edittext_tint"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_color"
+                            android:textSize="@dimen/text_input" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/standard_margin"
+                        android:text="Contact Phone number"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/secondary_text"
+
+                        android:textStyle="bold" />
+
+
+                    <!-- Phone no edit text-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_contact_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/ed_contact_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:maxLines="1"
+                            android:maxLength="10"
+                            android:paddingStart="@dimen/standard_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:inputType="number"
+                            android:paddingEnd="@dimen/activity_vertical_margin"
+                            android:backgroundTint="@color/edittext_tint"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_color"
+                            android:textSize="@dimen/text_input" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/standard_margin"
+                        android:text="GSTIN / UIN"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/secondary_text"
+
+                        android:textStyle="bold" />
+
+
+                    <!-- Phone no edit text-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_gstin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/ed_gstin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/standard_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:paddingEnd="@dimen/activity_vertical_margin"
+                            android:backgroundTint="@color/edittext_tint"
+                            android:maxLength="15"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_color"
+                            android:textSize="@dimen/text_input" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/buttonContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/button_style"
+                    android:text="CONTINUE"
+                    android:textAllCaps="true"
+                    android:textColor="#000000" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root_login"
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen.SplashScreen"
+    android:background="@color/background">
+
+
+    <TextView
+        android:id="@+id/info_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/page_titles"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:textStyle="bold"
+        android:layout_below="@+id/back_login"
+        android:textColor="@color/text_color"
+        android:text="Enter Email Address"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_layout"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/info_login"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/edit"
+        android:background="@drawable/rectangle_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:drawableStart="@drawable/email"
+            android:drawableTint="@color/text_color"
+            android:textSize="@dimen/text_input"
+            android:enabled="false"
+            android:padding="@dimen/activity_vertical_margin"
+            android:textColor="@color/text_color"
+            />
+        <EditText
+            android:id="@+id/email_address_login"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:padding="@dimen/activity_vertical_margin"
+            android:hint="Email address"
+            android:textColorHint="@color/text_color"
+            android:textColor="@color/text_color"
+            android:focusable="true"
+            android:textSize="@dimen/text_input"
+            android:backgroundTint="@color/red"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/change_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:drawableStart="@drawable/edit"
+            android:drawableTint="@color/text_color"
+            android:textSize="@dimen/text_input"
+            android:padding="@dimen/activity_vertical_margin"
+            android:textColor="@color/text_color" />
+
+    </LinearLayout>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_layout"
+        android:layout_width="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@+id/name_layout"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/password_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_dark"
+        android:orientation="horizontal">
+
+
+        <!-- Indian flag with country code edit text which is disabled -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:drawableStart="@drawable/password"
+            android:drawableTint="@color/text_color"
+            android:textSize="@dimen/text_input"
+            android:enabled="false"
+            android:padding="@dimen/activity_vertical_margin"
+            android:textColor="@color/text_color"
+            />
+        <EditText
+            android:id="@+id/password_login"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/activity_vertical_margin"
+            android:hint="Password"
+            android:textColorHint="@color/text_color"
+            android:textColor="@color/text_color"
+            android:focusable="true"
+            android:textSize="@dimen/text_input"
+            android:backgroundTint="@color/red"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+        <TextView
+            android:id="@+id/password_visibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_vertical_margin"
+            android:drawableStart="@drawable/ic_baseline_visibility_off_24"
+            android:textSize="@dimen/text_input"
+            android:textColor="@color/text_color"
+            android:drawableTint="@color/text_color"
+            />
+
+    </LinearLayout>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/buttonContinue_login"
+        android:layout_below="@+id/password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:enabled="true"
+        android:background="@drawable/button_style"
+        android:text="Continue"
+        android:textAllCaps="true"
+        android:textColor="@color/button_text"/>
+</RelativeLayout>

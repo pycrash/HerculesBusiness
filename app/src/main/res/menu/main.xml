@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Call Us Icon-->
+    <item
+        android:id="@+id/navigation_call"
+        android:icon="@drawable/call"
+        android:iconTint="@android:color/black"
+        android:orderInCategory="100"
+        android:title=""
+        app:showAsAction="ifRoom" />
+
+    <!-- Chat or contact -->
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/help"
+        android:orderInCategory="100"
+        android:title=""
+        app:showAsAction="ifRoom" />
+
+</menu>

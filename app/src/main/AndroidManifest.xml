@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.herculesbusiness">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".PendingOrders.DetailedPendingActivity" />
+        <activity android:name=".ViewCustomer.OrdersViewCustomerActivity" />
+        <activity android:name=".CompletedOrders.DetailedCompleteOrder" />
+        <activity android:name=".NewOrders.DetailedNewOrderActivity" />
+        <activity android:name=".RequestsActivity" />
+        <activity android:name=".LeisureRequests.LeisureRequests" />
+        <activity android:name=".SOLRequests.SOLRequestActivity" />
+        <activity android:name=".LeisureRequests.UploadLeisureActivity" />
+        <activity android:name=".Orders.ViewCustomersOrdersActivity"/>
+        <activity android:name=".ViewCustomer.CustomerView" />
+        <activity android:name=".SOLRequests.UploadSOLActivity" />
+        <activity android:name=".Admin.AdminUpdate" />
+        <activity android:name=".Admin.ViewAdminsActivity" />
+        <activity android:name=".Admin.UpdateAdminPassword" />
+        <activity android:name=".Admin.DeleteAdminActivity" />
+        <activity android:name=".Admin.AddAdminActivity" />
+        <activity android:name=".Admin.AdminOperationsActivity" />
+        <activity android:name=".CompletedOrders.CompletedOrdersActivity" />
+        <activity android:name=".Orders.OrdersOperationActivity" />
+        <activity android:name=".ViewCustomer.ViewCustomerActivity" />
+        <activity android:name=".Customers.CustomerOperationsActivity" />
+        <activity android:name=".Customers.UpdatePasswordActivity" />
+        <activity android:name=".Customers.UpdateDiscountActivity" />
+        <activity android:name=".Customers.UpdateCustomerActivity" />
+        <activity android:name=".Customers.DeleteCustomerActivity" />
+        <activity
+            android:name=".PendingOrders.PendingOrdersActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Customers.AddCustomerActivity" />
+        <activity android:name=".NewOrders.NewOrdersActivity" />
+        <activity android:name=".Home.HomeActivity" />
+        <activity
+            android:name=".Login.LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SplashScreen.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

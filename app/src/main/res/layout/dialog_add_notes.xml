@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/cardviewColor"
+    android:elevation="@dimen/cardview_default_elevation"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/standard_margin">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:text="Add Notes"
+        android:textColor="@color/text_color"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="Add Notes here"
+        android:inputType="textMultiLine"
+        android:maxLines="15"
+        android:textColorHint="@color/text_color"
+        android:textColor="@color/text_color" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:text="Cancel"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:text="OK"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+</LinearLayout>
+</androidx.cardview.widget.CardView>

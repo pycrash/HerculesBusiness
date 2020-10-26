@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:src="@drawable/back_arrow"
+        app:tint="@color/text_color" />
+
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/page_titles"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:textStyle="bold"
+        android:layout_below="@+id/back"
+        android:textColor="@color/text_color"
+        android:text="Category"/>
+    <LinearLayout
+        android:id="@+id/new_orders_no_orders"
+        android:visibility="gone"
+        android:layout_below="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_gravity="center"
+            android:id="@+id/animation_no_orders"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="@dimen/standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_marginRight="@dimen/standard_margin"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="false"
+            android:clickable="false"
+            app:lottie_enableMergePathsForKitKatAndAbove="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/no_orders" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/section_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:gravity="center"
+            android:text="No Orders Here !!"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:textSize="@dimen/page_titles"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/standard_margin"
+        android:id="@+id/new_orders_recycler_view"
+        android:layout_below="@+id/category"
+        android:orientation="vertical"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

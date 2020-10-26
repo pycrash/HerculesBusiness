@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Orders">
+        <menu >
+
+
+            <item android:id="@+id/new_orders"
+                android:icon="@drawable/ic_baseline_fiber_new_24"
+                android:title="New Orders"/>
+            <item android:id="@+id/pending_orders"
+                android:icon="@drawable/pending"
+                android:title="Pending Orders"/>
+            <item android:id="@+id/completed_orders"
+                android:icon="@drawable/ic_baseline_done_all_24"
+                android:title="Completed Orders"/>
+
+        </menu>
+    </item>
+    <item android:title="Trading" >
+        <menu >
+            <item android:id="@+id/trading"
+                android:icon="@drawable/preworkout"
+                android:title="Send SOL / Ledger"/>
+
+            <item android:id="@+id/sol_requests"
+                android:icon="@drawable/ic_baseline_amp_stories_24"
+                android:title="SOL Requests"/>
+            <item
+                android:id="@+id/leisure_requests"
+                android:icon="@drawable/ic_baseline_account_balance_wallet_24"
+                android:title="Ledger Requests"/>
+
+
+        </menu>
+
+
+    </item>
+
+
+    <item android:title="Admin" >
+        <menu >
+            <item android:id="@+id/view_admin"
+                android:icon="@drawable/ic_baseline_visibility_24"
+                android:title="View Admins"/>
+
+            <item android:id="@+id/add_admin"
+                android:icon="@drawable/ic_baseline_person_add_24"
+                android:title="Add Admin"/>
+            <item
+                android:id="@+id/change_admin_password"
+                android:icon="@drawable/ic_baseline_supervisor_account_24"
+                android:title="Change Admin Password"/>
+            <item
+                android:id="@+id/update_admin"
+                android:icon="@drawable/ic_baseline_payment_24"
+                android:title="Update Admin"/>
+
+        </menu>
+
+
+    </item>
+
+
+    <item android:title="Customer" >
+        <menu >
+            <item android:id="@+id/view_customers"
+                android:icon="@drawable/ic_baseline_visibility_24"
+                android:title="View Customers"/>
+
+            <item android:id="@+id/add_customer"
+                android:icon="@drawable/ic_baseline_person_add_24"
+                android:title="Add Customer"/>
+            <item
+                android:id="@+id/change_customer_password"
+                android:icon="@drawable/ic_baseline_supervisor_account_24"
+                android:title="Change Customer Password"/>
+            <item
+                android:id="@+id/update_customer"
+                android:icon="@drawable/ic_baseline_payment_24"
+                android:title="Update Customer"/>
+            <item
+                android:id="@+id/update_customer_discount"
+                android:icon="@drawable/ic_baseline_payment_24"
+                android:title="Update Discount"/>
+
+        </menu>
+
+
+    </item>
+    <item
+        android:id="@+id/log_out"
+        android:icon="@drawable/logout"
+        android:title="Log out"/>
+    <item
+        android:id="@+id/dark_mode_switch"
+        android:icon="@drawable/dark_mode"
+        android:title="Dark Mode"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:actionLayout="@layout/layout_switch"
+        />
+
+
+
+
+
+</menu>

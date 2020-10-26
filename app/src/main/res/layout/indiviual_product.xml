@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginEnd="@dimen/standard_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:layout_marginStart="@dimen/standard_margin"
+                            android:layout_marginEnd="@dimen/standard_margin"
+                            android:id="@+id/my_order_product_name"
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="monospace"
+                            android:text="Nature "
+                            android:textSize="@dimen/secondary_text"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp"
+                            />
+
+
+
+
+
+                            <TextView
+                                android:id="@+id/my_order_product_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ID"
+                                android:layout_marginTop="@dimen/less_padding"
+                                android:layout_marginStart="@dimen/standard_margin"
+                                android:layout_marginEnd="@dimen/standard_margin"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/secondary_text"
+                                android:textColor="@color/colorPrimaryDark"
+                                />
+
+
+                    <TextView
+                        android:id="@+id/my_order_quantity"
+                        android:layout_marginStart="@dimen/standard_margin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/green"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/standard_margin"
+                        android:textSize="@dimen/modal_text"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:textStyle="bold"
+                        android:text="Quantitiy"
+                        />
+
+                            <TextView
+                                android:layout_marginStart="@dimen/standard_margin"
+                                android:layout_marginEnd="@dimen/standard_margin"
+                                android:id="@+id/my_order_product_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/green"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/modal_text"
+                                android:textStyle="bold"
+                                android:text="Rs. %s"
+                                />
+
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+        </androidx.cardview.widget.CardView>

@@ -1,0 +1,636 @@
+<resources>
+    <string name="app_name">Business</string>
+
+    <string name="workout_essentials">Workout Essentials</string>
+    <string name="workout_essentials_info">Give an energy boost for your workout sessions</string>
+
+    <string name="wide_variety">Wide Variety</string>
+    <string name="search_variety">Search across a large variety of products</string>
+
+    <string name="authentic">Authenticity</string>
+    <string name="authentic_product">100% safe and authentic products</string>
+
+    <string name="product_id">Product ID: %1$s</string>
+    <string name="gram">%1$s g</string>
+    <string name="kcal">%1$s Kcal</string>
+    <string name="nutritional_facts">Nutritional Facts	Per %1$s g</string>
+    <string name="discount">%1$s &#37;</string>
+
+    <string name="terms">By proceeding, you agree to our Terms of service &amp; Privacy policy.</string>
+
+    <string name="service_not_available">Service not available</string>
+    <string name="invalid_lat_long_used">Invalid coordinates used</string>
+    <string name="gps_should_be_enabled">GPS should be enabled to access this feature</string>
+    <string name="get_current_location">Get current location</string>
+    <string name="location_permission_denied">Permission denies</string>
+
+    <string name="added" translatable="false">added</string>
+    <string name="modified" translatable="false">modified</string>
+    <string name="removed" translatable="false">removed</string>
+    <string name="price">\u20B9 %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Drawer State -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="category_gainer">gainer</string>
+    <string name="category_protein">protein</string>
+    <string name="category_pre">pre</string>
+    <string name="category_builder">builder</string>
+
+    <!-- Whey Proteins -->
+    <string name="gainer1_code">HT-H-012</string>
+    <string name="gainer1_name">Hercules Body Grow 1.0 Kg / 2.2 Lbs</string>
+    <string name="gainer1_price">1260</string>
+    <string name="gainer1_flavour">Chocolate</string>
+    <string name="gainer1_fat">3</string>
+    <string name="gainer1_carbo">75</string>
+    <string name="gainer1_proteins">20</string>
+    <string name="gainer1_calories">403</string>
+    <string name="gainer1_servings">20</string>
+    <string name="gainer1_nutrional_facts">100</string>
+    <string name="gainer1_multiplier">6</string>
+    <string name="gainer1_desc"><b>Hercules Body Grow</b> is one of the first offerings from our erstwhile best-selling “Vintage series” from the house of Hercules!\n
+
+\n<b>Muscle Weight Gain For “Hard-Gainers”-</b> A precisely formulated blend of fast and slow acting carbohydrates works towards imparting an anabolic pump to your muscles when taken in a pre-workout scenario helping you gain muscle weight in the shortest time.
+
+Hercules Body Grow has a high quality Whey Concentrate and Soy Isolate Protein Blend which imparts a superior Amino Acid profile to your body post your workouts, providing you with extra quick recovery, spectacular Muscle Weight Gain and Muscle Growth by keeping your body into an anabolic state.
+
+It contains a Scientifically Designed Digestive Enzyme Complex and Multivitamins which make sure your Muscles absorb and assimilate these extra Proteins and Calories. Hence making you Gain Muscle Weight at an astounding rate!
+
+\n\n<b>Directions to take Hercules Body Grow -</b> Mix 1 scoop with milk or water. For best results ensure to take one serving before workout and one serving after workout. Add 2 bananas or 6-7 cookies/biscuits per serving to increase the calorific value of your shake.
+
+        \n\n<b>Pre Workout- </b>One scoop of Hercules Body Grow taken in water 15 minutes before a workout/ taken in milk with 2 bananas 40 minutes before workout will impart a monstrous pump in your workouts whilst hardening your muscles and letting you dominate the weights.
+
+        \n\n<b>Post Workout-</b> One scoop of Hercules Body Grow taken in water immediately after your workout will help drive the proteins and glycogen right into the belly of your tired muscles, enabling your “pump” to last longer and speeding up the recovery and muscle gaining process.
+
+        \n\n<b>For Best Results-</b> Use Hercules Body Grow with safe and sensible but heavy lifting, done 3-4 times per week along with a generous intake of 4-5 solid meals spaced evenly throughout the day. Eat animal proteins like chicken, fish, eggs etc or dairy at least three times a day.
+
+        \n\n<b>Ingredients :</b> Whey Protein Concentrate, Soy Protein Isolate, Maltodextrin, Dextrose Monohydrate, Sucrose, Calcium Phosphate ( INS282),Creatine Monohydrate, Xantham Gum (INS415), Sucralose, Tricalcium Phosphate, Alkalised Cocoa Powder, Vitamins &amp; Minerals Premix, Natural &amp; Artificial Flavours, Colours ( INS154, INS155),Anticaking Agent ( INS551).</string>
+
+
+    <string name="gainer2_code">HT-H-013</string>
+    <string name="gainer2_name">Hercules Body Grow 3.0 Kg / 6.6 Lbs</string>
+    <string name="gainer2_price">3450</string>
+    <string name="gainer2_flavour">Chocolate</string>
+    <string name="gainer2_fat">3</string>
+    <string name="gainer2_carbo">75</string>
+    <string name="gainer2_proteins">20</string>
+    <string name="gainer2_calories">403</string>
+    <string name="gainer2_servings">60</string>
+    <string name="gainer2_nutrional_facts">100</string>
+    <string name="gainer2_multiplier">4</string>
+    <string name="gainer2_desc"><b>Hercules Body Grow</b> is one of the first offerings from our erstwhile best-selling “Vintage series” from the house of Hercules!\n
+
+\n<b>Muscle Weight Gain For “Hard-Gainers”-</b> A precisely formulated blend of fast and slow acting carbohydrates works towards imparting an anabolic pump to your muscles when taken in a pre-workout scenario helping you gain muscle weight in the shortest time.
+
+Hercules Body Grow has a high quality Whey Concentrate and Soy Isolate Protein Blend which imparts a superior Amino Acid profile to your body post your workouts, providing you with extra quick recovery, spectacular Muscle Weight Gain and Muscle Growth by keeping your body into an anabolic state.
+
+It contains a Scientifically Designed Digestive Enzyme Complex and Multivitamins which make sure your Muscles absorb and assimilate these extra Proteins and Calories. Hence making you Gain Muscle Weight at an astounding rate!
+
+\n\n<b>Directions to take Hercules Body Grow -</b> Mix 1 scoop with milk or water. For best results ensure to take one serving before workout and one serving after workout. Add 2 bananas or 6-7 cookies/biscuits per serving to increase the calorific value of your shake.
+
+        \n\n<b>Pre Workout- </b>One scoop of Hercules Body Grow taken in water 15 minutes before a workout/ taken in milk with 2 bananas 40 minutes before workout will impart a monstrous pump in your workouts whilst hardening your muscles and letting you dominate the weights.
+
+        \n\n<b>Post Workout-</b> One scoop of Hercules Body Grow taken in water immediately after your workout will help drive the proteins and glycogen right into the belly of your tired muscles, enabling your “pump” to last longer and speeding up the recovery and muscle gaining process.
+
+        \n\n<b>For Best Results-</b> Use Hercules Body Grow with safe and sensible but heavy lifting, done 3-4 times per week along with a generous intake of 4-5 solid meals spaced evenly throughout the day. Eat animal proteins like chicken, fish, eggs etc or dairy at least three times a day.
+
+        \n\n<b>Ingredients :</b> Whey Protein Concentrate, Soy Protein Isolate, Maltodextrin, Dextrose Monohydrate, Sucrose, Calcium Phosphate ( INS282),Creatine Monohydrate, Xantham Gum (INS415), Sucralose, Tricalcium Phosphate, Alkalised Cocoa Powder, Vitamins &amp; Minerals Premix, Natural &amp; Artificial Flavours, Colours ( INS154, INS155),Anticaking Agent ( INS551).</string>
+
+
+    <string name="gainer3_code">HT-H-015</string>
+    <string name="gainer3_name">Hercules Body Grow 5.0 Kg / 11.05 Lbs</string>
+    <string name="gainer3_price">3450</string>
+    <string name="gainer3_flavour">Chocolate</string>
+    <string name="gainer3_fat">3</string>
+    <string name="gainer3_carbo">75</string>
+    <string name="gainer3_proteins">20</string>
+    <string name="gainer3_calories">403</string>
+    <string name="gainer3_servings">100</string>
+    <string name="gainer3_nutrional_facts">100</string>
+    <string name="gainer3_multiplier">2</string>
+    <string name="gainer3_desc"><b>Hercules Body Grow</b> is one of the first offerings from our erstwhile best-selling “Vintage series” from the house of Hercules!\n
+
+\n<b>Muscle Weight Gain For “Hard-Gainers”-</b> A precisely formulated blend of fast and slow acting carbohydrates works towards imparting an anabolic pump to your muscles when taken in a pre-workout scenario helping you gain muscle weight in the shortest time.
+
+Hercules Body Grow has a high quality Whey Concentrate and Soy Isolate Protein Blend which imparts a superior Amino Acid profile to your body post your workouts, providing you with extra quick recovery, spectacular Muscle Weight Gain and Muscle Growth by keeping your body into an anabolic state.
+
+It contains a Scientifically Designed Digestive Enzyme Complex and Multivitamins which make sure your Muscles absorb and assimilate these extra Proteins and Calories. Hence making you Gain Muscle Weight at an astounding rate!
+
+\n\n<b>Directions to take Hercules Body Grow -</b> Mix 1 scoop with milk or water. For best results ensure to take one serving before workout and one serving after workout. Add 2 bananas or 6-7 cookies/biscuits per serving to increase the calorific value of your shake.
+
+        \n\n<b>Pre Workout- </b>One scoop of Hercules Body Grow taken in water 15 minutes before a workout/ taken in milk with 2 bananas 40 minutes before workout will impart a monstrous pump in your workouts whilst hardening your muscles and letting you dominate the weights.
+
+        \n\n<b>Post Workout-</b> One scoop of Hercules Body Grow taken in water immediately after your workout will help drive the proteins and glycogen right into the belly of your tired muscles, enabling your “pump” to last longer and speeding up the recovery and muscle gaining process.
+
+        \n\n<b>For Best Results-</b> Use Hercules Body Grow with safe and sensible but heavy lifting, done 3-4 times per week along with a generous intake of 4-5 solid meals spaced evenly throughout the day. Eat animal proteins like chicken, fish, eggs etc or dairy at least three times a day.
+
+        \n\n<b>Ingredients :</b> Whey Protein Concentrate, Soy Protein Isolate, Maltodextrin, Dextrose Monohydrate, Sucrose, Calcium Phosphate ( INS282),Creatine Monohydrate, Xantham Gum (INS415), Sucralose, Tricalcium Phosphate, Alkalised Cocoa Powder, Vitamins &amp; Minerals Premix, Natural &amp; Artificial Flavours, Colours ( INS154, INS155),Anticaking Agent ( INS551).</string>
+
+
+    <string name="gainer4_code">HT-H-03</string>
+    <string name="gainer4_name">Hercules Rapid Mass 1.5 Kg / 3.3 Lbs</string>
+    <string name="gainer4_price">2070</string>
+    <string name="gainer4_flavour">Rich Chocolate</string>
+    <string name="gainer4_fat">5</string>
+    <string name="gainer4_carbo">70</string>
+    <string name="gainer4_proteins">22</string>
+    <string name="gainer4_calories">403</string>
+    <string name="gainer4_servings">20</string>
+    <string name="gainer4_nutrional_facts">100</string>
+    <string name="gainer4_multiplier">6</string>
+    <string name="gainer4_desc"><b>RAPID MASS BULK GAIN PROTEIN</b>
+If you’re looking for serious mass gains then get serious with HERCULES RAPID MASS. It comes truck loaded with the right ratio of high quality carbs and proteins along with a scientifically designed digestive enzyme complex along with multivitamins. This make sure your muscles absorb and assimilate these extra proteins and hence grow bigger, stronger in the shortest time possible.
+
+        \n\n<b>DIRECTIONS FOR USE</b> Hercules Rapid Mass- As a dietary Supplement mix 1 scoop with milk or water (8-12 fl.oz.). for best results ensure to take one scoop before and one scoop after workout. To increase the calorific value of your shake add 2 bananas or 6-7 cookies/biscuits per serving.
+
+\n\n<b>PRE WORKOUT- </b>Begin with one serving(1 scoop) of Rapid Mass with water 15 minutes prior to workout or 40 minutes prior to workout with milk with 2 bananas. It will impart a monstrous pump in your workout whilst hardening your muscles and letting you dominate the weights.
+
+\n\n<b>POST WORKOUT-</b> Consume one serving (1 scoop) of Rapid Mass with water immediately post workout. It will help drive the proteins and glycogen right into the belly of your tired muscles, enabling your “pump” to last longer and speeding up the recovery and muscle gaining process.
+
+\n\n<b>FOR BEST RESULT- </b>use Rapid Mass with safe and sensible but heavy lifting, done 3-4 times per week along with a generous intake of 4-5 solid meals spaced evenly throughout the day. Consume White meat i.e chicken, fish, eggs or dairy products at least thrice a day.
+
+\n\n<b>STANDOUT AND PATH BREAKING FORMULATION!</b>
+World’s first MASS GAINER which introduces the powered combination of a high quality formula united with the strength, size and muscle volurnising properties of CREAPURE CREATINE and complex carbs in a ratio never formulated before in other competitive mass gainers (3 grams per serving).
+
+This leading- edge combo lets your muscles get a pump which you never experienced before and a strength which will translate into shirt-splitting gains!
+
+It contains high quality whey Proteins rushing in to provide you with extra quick recovery along with BCAA’s and Glutamine keeping your body into a constant anabolic state.
+
+Scientifically designed Digestive Enzyme complex and Multivitamins which make sure your muscles absorb and assimilate these extra proteins and hence grow bigger and stronger in the shortest time possible.
+
+\n\n<b>VOLUME RULES-</b> Astounding 3 grams of Creapure Creatine per serving builds your muscles and body weight like a PRO.
+
+        \n\n<b>RECOVERY IS THE KEY TO GROWTH-</b> Added Glutamine and BCAA’s for faster recovery and anabolism.
+
+\n\n<b>PROTEIN MAKES YOU PERFECT-</b> Utmost Whey Protein Concentrate per serving amongst mass gainers.
+
+        \n\n<b>DIETARY SUPPLEMENT</b>
+Keep only in the original container. Keep tightly closed. Store in a cool, dry and dark place. This admin is intended as a dietary supplement only. Do not use as a sole source of nutrition.
+    </string>
+
+
+    <string name="gainer5_code">HT-H-04</string>
+    <string name="gainer5_name">Hercules Rapid Mass 3 Kg / 6.6 Lbs</string>
+    <string name="gainer5_price">3960</string>
+    <string name="gainer5_flavour">Rich Chocolate</string>
+    <string name="gainer5_fat">5</string>
+    <string name="gainer5_carbo">70</string>
+    <string name="gainer5_proteins">22</string>
+    <string name="gainer5_calories">403</string>
+    <string name="gainer5_servings">60</string>
+    <string name="gainer5_multiplier">4</string>
+    <string name="gainer5_nutrional_facts">100</string>
+    <string name="gainer5_desc"><b>RAPID MASS BULK GAIN PROTEIN</b>
+If you’re looking for serious mass gains then get serious with HERCULES RAPID MASS. It comes truck loaded with the right ratio of high quality carbs and proteins along with a scientifically designed digestive enzyme complex along with multivitamins. This make sure your muscles absorb and assimilate these extra proteins and hence grow bigger, stronger in the shortest time possible.
+
+        \n\n<b>DIRECTIONS FOR USE</b> Hercules Rapid Mass- As a dietary Supplement mix 1 scoop with milk or water (8-12 fl.oz.). for best results ensure to take one scoop before and one scoop after workout. To increase the calorific value of your shake add 2 bananas or 6-7 cookies/biscuits per serving.
+
+\n\n<b>PRE WORKOUT- </b>Begin with one serving(1 scoop) of Rapid Mass with water 15 minutes prior to workout or 40 minutes prior to workout with milk with 2 bananas. It will impart a monstrous pump in your workout whilst hardening your muscles and letting you dominate the weights.
+
+\n\n<b>POST WORKOUT-</b> Consume one serving (1 scoop) of Rapid Mass with water immediately post workout. It will help drive the proteins and glycogen right into the belly of your tired muscles, enabling your “pump” to last longer and speeding up the recovery and muscle gaining process.
+
+\n\n<b>FOR BEST RESULT- </b>use Rapid Mass with safe and sensible but heavy lifting, done 3-4 times per week along with a generous intake of 4-5 solid meals spaced evenly throughout the day. Consume White meat i.e chicken, fish, eggs or dairy products at least thrice a day.
+
+\n\n<b>STANDOUT AND PATH BREAKING FORMULATION!</b>
+World’s first MASS GAINER which introduces the powered combination of a high quality formula united with the strength, size and muscle volurnising properties of CREAPURE CREATINE and complex carbs in a ratio never formulated before in other competitive mass gainers (3 grams per serving).
+
+This leading- edge combo lets your muscles get a pump which you never experienced before and a strength which will translate into shirt-splitting gains!
+
+It contains high quality whey Proteins rushing in to provide you with extra quick recovery along with BCAA’s and Glutamine keeping your body into a constant anabolic state.
+
+Scientifically designed Digestive Enzyme complex and Multivitamins which make sure your muscles absorb and assimilate these extra proteins and hence grow bigger and stronger in the shortest time possible.
+
+\n\n<b>VOLUME RULES-</b> Astounding 3 grams of Creapure Creatine per serving builds your muscles and body weight like a PRO.
+
+        \n\n<b>RECOVERY IS THE KEY TO GROWTH-</b> Added Glutamine and BCAA’s for faster recovery and anabolism.
+
+\n\n<b>PROTEIN MAKES YOU PERFECT-</b> Utmost Whey Protein Concentrate per serving amongst mass gainers.
+
+        \n\n<b>DIETARY SUPPLEMENT</b>
+Keep only in the original container. Keep tightly closed. Store in a cool, dry and dark place. This admin is intended as a dietary supplement only. Do not use as a sole source of nutrition.
+    </string>
+
+
+    <string name="gainer6_code">HT-H-07</string>
+    <string name="gainer6_name">Hercules Rapid Mass 5 Kg / 11.05 Lbs</string>
+    <string name="gainer6_price">5790</string>
+    <string name="gainer6_flavour">Rich Chocolate</string>
+    <string name="gainer6_fat">5</string>
+    <string name="gainer6_carbo">70</string>
+    <string name="gainer6_proteins">22</string>
+    <string name="gainer6_calories">403</string>
+    <string name="gainer6_servings">100</string>
+    <string name="gainer6_nutrional_facts">100</string>
+    <string name="gainer6_multiplier">2</string>
+    <string name="gainer6_desc"><b>RAPID MASS BULK GAIN PROTEIN</b>
+If you’re looking for serious mass gains then get serious with HERCULES RAPID MASS. It comes truck loaded with the right ratio of high quality carbs and proteins along with a scientifically designed digestive enzyme complex along with multivitamins. This make sure your muscles absorb and assimilate these extra proteins and hence grow bigger, stronger in the shortest time possible.
+
+        \n\n<b>DIRECTIONS FOR USE</b> Hercules Rapid Mass- As a dietary Supplement mix 1 scoop with milk or water (8-12 fl.oz.). for best results ensure to take one scoop before and one scoop after workout. To increase the calorific value of your shake add 2 bananas or 6-7 cookies/biscuits per serving.
+
+\n\n<b>PRE WORKOUT- </b>Begin with one serving(1 scoop) of Rapid Mass with water 15 minutes prior to workout or 40 minutes prior to workout with milk with 2 bananas. It will impart a monstrous pump in your workout whilst hardening your muscles and letting you dominate the weights.
+
+\n\n<b>POST WORKOUT-</b> Consume one serving (1 scoop) of Rapid Mass with water immediately post workout. It will help drive the proteins and glycogen right into the belly of your tired muscles, enabling your “pump” to last longer and speeding up the recovery and muscle gaining process.
+
+\n\n<b>FOR BEST RESULT- </b>use Rapid Mass with safe and sensible but heavy lifting, done 3-4 times per week along with a generous intake of 4-5 solid meals spaced evenly throughout the day. Consume White meat i.e chicken, fish, eggs or dairy products at least thrice a day.
+
+\n\n<b>STANDOUT AND PATH BREAKING FORMULATION!</b>
+World’s first MASS GAINER which introduces the powered combination of a high quality formula united with the strength, size and muscle volurnising properties of CREAPURE CREATINE and complex carbs in a ratio never formulated before in other competitive mass gainers (3 grams per serving).
+
+This leading- edge combo lets your muscles get a pump which you never experienced before and a strength which will translate into shirt-splitting gains!
+
+It contains high quality whey Proteins rushing in to provide you with extra quick recovery along with BCAA’s and Glutamine keeping your body into a constant anabolic state.
+
+Scientifically designed Digestive Enzyme complex and Multivitamins which make sure your muscles absorb and assimilate these extra proteins and hence grow bigger and stronger in the shortest time possible.
+
+\n\n<b>VOLUME RULES-</b> Astounding 3 grams of Creapure Creatine per serving builds your muscles and body weight like a PRO.
+
+        \n\n<b>RECOVERY IS THE KEY TO GROWTH-</b> Added Glutamine and BCAA’s for faster recovery and anabolism.
+
+\n\n<b>PROTEIN MAKES YOU PERFECT-</b> Utmost Whey Protein Concentrate per serving amongst mass gainers.
+
+        \n\n<b>DIETARY SUPPLEMENT</b>
+Keep only in the original container. Keep tightly closed. Store in a cool, dry and dark place. This admin is intended as a dietary supplement only. Do not use as a sole source of nutrition.
+    </string>
+
+
+    <string name="builder1_code">HT-H-08</string>
+    <string name="builder1_name">Hercules Rapid ISOTECH 1.0 Kg / 2.2 Lbs</string>
+    <string name="builder1_price">2340</string>
+    <string name="builder1_flavour">Cafe mocha</string>
+    <string name="builder1_fat">3</string>
+    <string name="builder1_carbo">90</string>
+    <string name="builder1_proteins">44</string>
+    <string name="builder1_calories">398</string>
+    <string name="builder1_servings">30</string>
+    <string name="builder1_nutrional_facts">150</string>
+    <string name="builder1_multiplier">6</string>
+    <string name="builder1_desc"><b>PATH-BREAKING SCIENTIFIC FORMULATION</b>
+\n<b>Whey Isolate-</b> The purest form of whey, better than whey concentrate in terms of results, faster absorption and post workout recovery. It contains all the essential 9 amino acids that your body needs to repair muscle after a workout.
+
+\n\n<b>L-Leucine- </b>The most powerful amino acid for stimulating protein synthesis in the body as compared to any other amino acid. Leucine activated complex muscle-building pathways in the body and increases protein-building resulting in more growth.
+
+\n\n<b>L-Citrulline-</b> A cutting edge component superior to L-Arginine helps to increase your growth hormone while raising testosterone levels. It imparts a monstrous muscle pump whilst increasing Nitric Oxide levels in the body helping you build more muscle and increasing workout endurance and decreasing muscle fatigue and soreness
+
+\n\n<b>Creapure Creatine-</b> A monstrous 3 grams of the very best Creapure Creatine speeds up lean muscle growth reduces fatigue, helps your muscle cells to produce more energy, improves strength, endurance and recovery and also improves brain function.
+
+\n\n<b>THE ULTIMATE STACK</b>
+Hercules Isotech is the most comprehensive Lean Muscle Builder you will ever lay your hands on. It’s an unheard amalgamation of the most anabolic of naturally occurring nutrients and components that there can be.
+
+\n\nIT WILL Endow you with the explosive size, muscle growth and gains that the best MASS-GAINERS can provide, MINUS the irritating and unwanted belly/lower back/facial fat.
+
+Deliver all the goodness and Lean Muscle building benefits of WHEY PROTEIN ISOLATE. But the RESULTS won’t be “microscopic” or minimum in nature, as is the case with when just Whey isolate or Concentrate are taken in isolation.
+
+Impart you with the addictive and Long-Term Muscle-Growth triggering benefits that the best PRE-WORKOUT supplements can offer, MINUS the jitters and discomfort caused by excess caffeine which prevents late evening workouts and is more of a fat burning ingredient which interferes with the muscle building process.
+
+\n\n<b>DIRECTION FOR USE</b>
+\n\n<b>Pre-Workout</b>
+Take 50 Grams (1 scoop) of Hercules Rapid Isotech 15-20 minutes before your workout.
+
+For the very BEST OF RESULTS, consume 75 grams (1 and a half scoop) 15-20 minutes before your workout.
+
+\n\n<b>Post-Workout</b>
+Take 50 grams (1 scoop) of Hercules Rapid Isotech immediately after your workout.
+
+For the very BEST OF RESULTS, consume 75 grams (1 and a half scoop) immediately after your workout.
+
+\n\n<b>DIETARY SUPPLEMENT</b>
+Keep only in the original container. Keep tightly closed. Store in a cool, dry and dark place. This admin is intended as a dietary supplement only. Do not use as a sole source of nutrition.
+    </string>
+
+
+    <string name="builder2_code">HT-H-09</string>
+    <string name="builder2_name">Hercules Rapid ISOTECH 3.0 Kg / 6.6 Lbs</string>
+    <string name="builder2_price">6199</string>
+    <string name="builder2_flavour">Cafe mocha</string>
+    <string name="builder2_fat">3</string>
+    <string name="builder2_carbo">90</string>
+    <string name="builder2_proteins">44</string>
+    <string name="builder2_calories">398</string>
+    <string name="builder2_servings">60</string>
+    <string name="builder2_nutrional_facts">150</string>
+    <string name="builder2_multiplier">4</string>
+    <string name="builder2_desc"><b>PATH-BREAKING SCIENTIFIC FORMULATION</b>
+\n<b>Whey Isolate-</b> The purest form of whey, better than whey concentrate in terms of results, faster absorption and post workout recovery. It contains all the essential 9 amino acids that your body needs to repair muscle after a workout.
+
+\n\n<b>L-Leucine- </b>The most powerful amino acid for stimulating protein synthesis in the body as compared to any other amino acid. Leucine activated complex muscle-building pathways in the body and increases protein-building resulting in more growth.
+
+\n\n<b>L-Citrulline-</b> A cutting edge component superior to L-Arginine helps to increase your growth hormone while raising testosterone levels. It imparts a monstrous muscle pump whilst increasing Nitric Oxide levels in the body helping you build more muscle and increasing workout endurance and decreasing muscle fatigue and soreness
+
+\n\n<b>Creapure Creatine-</b> A monstrous 3 grams of the very best Creapure Creatine speeds up lean muscle growth reduces fatigue, helps your muscle cells to produce more energy, improves strength, endurance and recovery and also improves brain function.
+
+\n\n<b>THE ULTIMATE STACK</b>
+Hercules Isotech is the most comprehensive Lean Muscle Builder you will ever lay your hands on. It’s an unheard amalgamation of the most anabolic of naturally occurring nutrients and components that there can be.
+
+\n\nIT WILL Endow you with the explosive size, muscle growth and gains that the best MASS-GAINERS can provide, MINUS the irritating and unwanted belly/lower back/facial fat.
+
+Deliver all the goodness and Lean Muscle building benefits of WHEY PROTEIN ISOLATE. But the RESULTS won’t be “microscopic” or minimum in nature, as is the case with when just Whey isolate or Concentrate are taken in isolation.
+
+Impart you with the addictive and Long-Term Muscle-Growth triggering benefits that the best PRE-WORKOUT supplements can offer, MINUS the jitters and discomfort caused by excess caffeine which prevents late evening workouts and is more of a fat burning ingredient which interferes with the muscle building process.
+
+\n\n<b>DIRECTION FOR USE</b>
+\n\n<b>Pre-Workout</b>
+Take 50 Grams (1 scoop) of Hercules Rapid Isotech 15-20 minutes before your workout.
+
+For the very BEST OF RESULTS, consume 75 grams (1 and a half scoop) 15-20 minutes before your workout.
+
+\n\n<b>Post-Workout</b>
+Take 50 grams (1 scoop) of Hercules Rapid Isotech immediately after your workout.
+
+For the very BEST OF RESULTS, consume 75 grams (1 and a half scoop) immediately after your workout.
+
+\n\n<b>DIETARY SUPPLEMENT</b>
+Keep only in the original container. Keep tightly closed. Store in a cool, dry and dark place. This admin is intended as a dietary supplement only. Do not use as a sole source of nutrition.
+    </string>
+
+
+    <string name="builder3_code">HT-H-01</string>
+    <string name="builder3_name">Hercules Rapid Lean 1.5 Kg / 3,3 Lbs</string>
+    <string name="builder3_price">2700</string>
+    <string name="builder3_flavour">Rich Chocolate</string>
+    <string name="builder3_fat">1.5</string>
+    <string name="builder3_carbo">60</string>
+    <string name="builder3_proteins">32</string>
+    <string name="builder3_calories">377</string>
+    <string name="builder3_servings">30</string>
+    <string name="builder3_nutrional_facts">100</string>
+    <string name="builder3_multiplier">6</string>
+    <string name="builder3_desc"><b>HERCULES RAPID LEAN</b> floods and pumps your tired out muscles with timed release carbohydrates promoting visible and quick lean muscle mass gains whilst keeping the fat mass to a minimum.
+
+\n\nFuelled by high doses of CREAPURE CREATINE, the carb complex quickly shuttles creatine into the muscle, promoting anabolism, muscle glycogen replenishment and hence enables you to get bigger, lift heavier and blast through your workouts.
+
+\n\nThe scientific blend of glutamine (3gm/serving) BCAA’s (3gm/serving) and multivitamins ensure optimum protein absorption by your muscles and speed up your post workout recovery and fatigue and prevent muscle breakdown and catabolism.
+
+\n\n32 grams of high quality proteins per 100 grams ensure you recover the fastest and GROW just the way that you wanted – LEAN!
+
+\n\n<b>DIRECTIONS FOR USE HERCULES RAPID LEAN-</b> mix 1 scoop with skim milk, almond milk or water(8-12 fl.oz). For best results ensure to take one serving before workout and one serving after workout. Add some RIPE blueberries, strawberries/black grapes/bananas per serving to increase the antioxidants, minerals and vitamins along with the calorific value of your shake.
+
+\n\n<b>PRE WORKOUT-</b> One scoop of Rapid lean taken in water 15 minutes before a workout/ taken in skim milk with 2 bananas 40 minutes before workout will impart a monstrous pump in your workouts whilst hardening your muscles and letting you dominate the weights.
+
+\n\n<b>POST WORKOUT-</b> One scoop of Rapid lean taken in water/ skim milk/almond milk immediately after your workout will help drive the proteins and glycogen right into the belly to your tired muscles, enabling your “pump” to last longer and speeding up the recovery and muscle gaining process. Add almonds/walnuts/flax seed to increase the healthy fat content, essential for growth hormone/testosterone production, which is essential for lean muscle gains!
+
+\n\n<b>FOR BEST RESULT-</b> use Rapid lean with safe and sensible but heavy lifting, done 3-4 times per week along with a generous intake of 4-5 solid protein rich meals spaced evenly throughout the day. Eat animal proteins like chicken, fish, eggs etc or skimmed dairy products at least three times a day.
+
+\n\n<b>LEAN MUSCLE BUILDING MORTAR-</b> 3 grams CREAPURE CREATINE per 100 grams
+
+\n\n<b>PRoLEAN ME MORE-</b> more proteins per serving than other lean gainers(32 grams)
+
+\n\n<b>WIN THE POST WORKOUT BATTLE-</b> with 3 grams BCAA’s and Glutamine per 100 grams.
+
+\n\n<b>DIETARY SUPPLEMENT</b>
+Keep only in the original container. Keep tightly closed. Store in a cool, dry and dark place. This products is intended as a dietary supplement only. Do not use as a sole source of nutrition.</string>
+
+
+    <string name="builder4_code">HT-H-02</string>
+    <string name="builder4_name">Hercules Rapid Lean 3.0 Kg / 6.6 Lbs</string>
+    <string name="builder4_price">4990</string>
+    <string name="builder4_flavour">Rich Chocolate</string>
+    <string name="builder4_fat">1.5</string>
+    <string name="builder4_carbo">60</string>
+    <string name="builder4_proteins">32</string>
+    <string name="builder4_calories">377</string>
+    <string name="builder4_servings">60</string>
+    <string name="builder4_multiplier">4</string>
+    <string name="builder4_nutrional_facts">100</string>
+    <string name="builder4_desc"><b>HERCULES RAPID LEAN</b> floods and pumps your tired out muscles with timed release carbohydrates promoting visible and quick lean muscle mass gains whilst keeping the fat mass to a minimum.
+
+\n\nFuelled by high doses of CREAPURE CREATINE, the carb complex quickly shuttles creatine into the muscle, promoting anabolism, muscle glycogen replenishment and hence enables you to get bigger, lift heavier and blast through your workouts.
+
+\n\nThe scientific blend of glutamine (3gm/serving) BCAA’s (3gm/serving) and multivitamins ensure optimum protein absorption by your muscles and speed up your post workout recovery and fatigue and prevent muscle breakdown and catabolism.
+
+\n\n32 grams of high quality proteins per 100 grams ensure you recover the fastest and GROW just the way that you wanted – LEAN!
+
+\n\n<b>DIRECTIONS FOR USE HERCULES RAPID LEAN-</b> mix 1 scoop with skim milk, almond milk or water(8-12 fl.oz). For best results ensure to take one serving before workout and one serving after workout. Add some RIPE blueberries, strawberries/black grapes/bananas per serving to increase the antioxidants, minerals and vitamins along with the calorific value of your shake.
+
+\n\n<b>PRE WORKOUT-</b> One scoop of Rapid lean taken in water 15 minutes before a workout/ taken in skim milk with 2 bananas 40 minutes before workout will impart a monstrous pump in your workouts whilst hardening your muscles and letting you dominate the weights.
+
+\n\n<b>POST WORKOUT-</b> One scoop of Rapid lean taken in water/ skim milk/almond milk immediately after your workout will help drive the proteins and glycogen right into the belly to your tired muscles, enabling your “pump” to last longer and speeding up the recovery and muscle gaining process. Add almonds/walnuts/flax seed to increase the healthy fat content, essential for growth hormone/testosterone production, which is essential for lean muscle gains!
+
+\n\n<b>FOR BEST RESULT-</b> use Rapid lean with safe and sensible but heavy lifting, done 3-4 times per week along with a generous intake of 4-5 solid protein rich meals spaced evenly throughout the day. Eat animal proteins like chicken, fish, eggs etc or skimmed dairy products at least three times a day.
+
+\n\n<b>LEAN MUSCLE BUILDING MORTAR-</b> 3 grams CREAPURE CREATINE per 100 grams
+
+\n\n<b>PRoLEAN ME MORE-</b> more proteins per serving than other lean gainers(32 grams)
+
+\n\n<b>WIN THE POST WORKOUT BATTLE-</b> with 3 grams BCAA’s and Glutamine per 100 grams.
+
+\n\n<b>DIETARY SUPPLEMENT</b>
+Keep only in the original container. Keep tightly closed. Store in a cool, dry and dark place. This products is intended as a dietary supplement only. Do not use as a sole source of nutrition.</string>
+
+    <string name="protein1_code">HT-H-06</string>
+    <string name="protein1_name">Hercules Rapid Whey 1 Kg / 2.2 Lbs</string>
+    <string name="protein1_price">2999</string>
+    <string name="protein1_flavour">Deluxe Chocolate</string>
+    <string name="protein1_fat">0.51</string>
+    <string name="protein1_carbo">3</string>
+    <string name="protein1_proteins">26.18</string>
+    <string name="protein1_calories">135</string>
+    <string name="protein1_servings">29</string>
+    <string name="protein1_multiplier">6</string>
+    <string name="protein1_nutrional_facts">100</string>
+    <string name="protein1_desc"><b>Hercules Rapid Whey</b> is the escalator which leads you towards your goals of achieving a Greek God-esque phsique with lean rippling haedened muscles. Our advanced scientific formula delivers the optimum dosage of high quality whey isolate and whey concentrate along with added (of utmost importance BCAA\'s and Glutamine to your muscles, aiding recovery especially in the post-workout window wherein your body\'s broken and tired muscle cells are in dire need of a fast acting quality protein.
+
+\n\nHercules Rapid whey comes to their rescue right away, facilltating and speeding up the muscle recovery and the lean muscle building procees.
+
+\n\nIt contains all the essential and non-essential amino acids required for immediate muscle tissue repair right after a grueling workout.
+
+\n\n<b>PRE WORKOUT-</b> Yes! Modern research shows that taking 1 scoop (1 serving ) of whey protein half an hour prior to your workout creates positive nitrogen balance in your body-which stimulates protein synthesis, resulting in increased muscle mass. Taking 1 scoop (1 serving ) of advanced Hercules Rapid whey 20 minures before your workout will spark off a series of anabolic events. It will keep your body\'s cortisol ( stress) levels down during the workout, increase your testosterone levels, gain strength, add lean muscle mass and enhance fat loss, and will help you recover faster.
+
+\n\n<b>POST WORKOUT-</b> This is the most crucial and important time for your fitness/bodybuilding goals. After a strenuous workout sessin, your muscles become a nutrient hungry sponge, which just soak up quality protein and other micro nutrients thrown its way.
+
+\n\nThe recovery and growth of your muscles is going to go into hyper-drive when you feed it with 1 scoop (1 serving ) of Hercules Rapid whey protein after your workout, The supply of high quality, whey Isolate &amp; concentrate, along with added BCAA\'s and Glutamine to your muscles will replenish, repair , rehuvenate and revitalize them. It will do everything mentaioned in the pre-workout scenario above, and more!
+
+\n\n<b>DIETARY SUPPLEMENT</b>
+Keep only in the original container. Keep tightly closed. Store in a cool, dry and dark place. This products is intended as a dietary supplement only. Do not use as a sole source of nutrition.</string>
+
+    <string name="protein2_code">HT-H-06</string>
+    <string name="protein2_name">Hercules Rapid Whey 2 Kg / 4.4 Lbs</string>
+    <string name="protein2_price">5650</string>
+    <string name="protein2_flavour">Deluxe Chocolate</string>
+    <string name="protein2_fat">0.51</string>
+    <string name="protein2_carbo">3</string>
+    <string name="protein2_proteins">26.18</string>
+    <string name="protein2_calories">135</string>
+    <string name="protein2_servings">59</string>
+    <string name="protein2_multiplier">6</string>
+    <string name="protein2_nutrional_facts">100</string>
+    <string name="protein2_desc"><b>Hercules Rapid Whey</b> is the escalator which leads you towards your goals of achiving a Greek God-esque phsique with lean rippling haedened muscles. Our advanced scientific formula delivers the optimum dosage of high quality whey isolate and whey concentrate along with added (of utmost importance BCAA\'s and Glutamine to your muscles, aiding recovery especially in the post-workout window wherein your body\'s broken and tired muscle cells are in dire need of a fast acting quality protein.
+
+\n\nHercules Rapid whey comes to their rescue right away, facilltating and speeding up the muscle recovery and the lean muscle building procees.
+
+\n\nIt contains all the essential and non-essential amino acids required for immediate muscle tissue repair right after a grueling workout.
+
+\n\n<b>PRE WORKOUT-</b> Yes! Modern research shows that taking 1 scoop (1 serving ) of whey protein half an hour prior to your workout creates positive nitrogen balance in your body-which stimulates protein synthesis, resulting in increased muscle mass. Taking 1 scoop (1 serving ) of advanced Hercules Rapid whey 20 minures before your workout will spark off a series of anabolic events. It will keep your body\'s cortisol ( stress) levels down during the workout, increase your testosterone levels, gain strength, add lean muscle mass and enhance fat loss, and will help you recover faster.
+
+\n\n<b>POST WORKOUT-</b> This is the most crucial and important time for your fitness/bodybuilding goals. After a strenuous workout sessin, your muscles become a nutrient hungry sponge, which just soak up quality protein and other micro nutrients thrown its way.
+
+\n\nThe recovery and growth of your muscles is going to go into hyper-drive when you feed it with 1 scoop (1 serving ) of Hercules Rapid whey protein after your workout, The supply of high quality, whey Isolate &amp; concentrate, along with added BCAA\'s and Glutamine to your muscles will replenish, repair , rehuvenate and revitalize them. It will do everything mentaioned in the pre-workout scenario above, and more!
+
+\n\n<b>DIETARY SUPPLEMENT</b>
+Keep only in the original container. Keep tightly closed. Store in a cool, dry and dark place. This products is intended as a dietary supplement only. Do not use as a sole source of nutrition.</string>
+
+
+    <string name="pre1_code">HT-IB-18</string>
+    <string name="pre1_name">Hercules Blast 450 g / 0.9 Lbs Green Apple Flavour</string>
+    <string name="pre1_price">2610</string>
+    <string name="pre1_flavour">Green Apple</string>
+    <string name="pre1_fat">0</string>
+    <string name="pre1_carbo">4</string>
+    <string name="pre1_proteins">0</string>
+    <string name="pre1_calories">60.1</string>
+    <string name="pre1_servings">30</string>
+    <string name="pre1_multiplier">3</string>
+    <string name="pre1_nutrional_facts">20</string>
+    <string name="pre1_desc"><b>Hercules Blast</b> is a high octane pre workout that kicks in within minutes, rattles your cage and awakens you from your slumber, invokes the hungry beast inside of you who wants to attack the weight room with ferocious intensity and dominate it with a might that makes you seem like the next incarnation of the mythical half-god half-human Hercules himself.
+
+\n\nThe perfect mix of our highly-researched ingredients floods your veins with just the right mix of caffeine that is neither too extreme, nor too low. Razor sharp focus and a tunnel vision approach is what you will get, without having to worry about any side effects.
+
+\n\nCreatine helps you maintain healthy and consistent levels of strength throughout your workout.
+
+\n\nL-arginine ensures you a greater pump as you workout and has also been shown to have a positive effect on endurance, sex-drive and libido. taurine will improve your athletic performance and L-Tyrosine plays a major role in neural stimulation.
+
+\n\nL-Leucine helps the muscles heal faster, prevents muscle breakdown under stress and helps increase muscle mass.
+
+\n\nSo now you know-that when it comes to working out, no half measures, no excuses are going to last, because you\'ve got BLAAST!
+
+\n\n<b>Suggested Use</b>-Mix 1 scoop of Blaast in 8-12 oz of water 20 minutes before your workout. Hardcore trainees who are accustomed to higher dosages of caffeine or other stimulants, can take 2 scoops.
+
+\n\n<b>DIETARY SUPPLEMENT </b>
+Keep only in the original container. Keep tightly closed. Store in a cool, dry and dark place. This admin is intended as a dietary supplement only. Do not use as a sole source of nutrition.
+
+\n\nUse within 18 months from the date of manufacturing.
+Use within 2 months after opening the jar.
+    </string>
+
+
+    <string name="pre2_code">HT-H-05</string>
+    <string name="pre2_name">Hercules Blast 450 g / 0.9 Lbs Watermelon Flavour</string>
+    <string name="pre2_price">2610</string>
+    <string name="pre2_flavour">Watermelon</string>
+    <string name="pre2_fat">0</string>
+    <string name="pre2_carbo">4</string>
+    <string name="pre2_proteins">0</string>
+    <string name="pre2_calories">60.1</string>
+    <string name="pre2_servings">30</string>
+    <string name="pre2_multiplier">3</string>
+    <string name="pre2_nutrional_facts">20</string>
+    <string name="pre2_desc"><b>Hercules Blast</b> is a high octane pre workout that kicks in within minutes, rattles your cage and awakens you from your slumber, invokes the hungry beast inside of you who wants to attack the weight room with ferocious intensity and dominate it with a might that makes you seem like the next incarnation of the mythical half-god half-human Hercules himself.
+
+\n\nThe perfect mix of our highly-researched ingredients floods your veins with just the right mix of caffeine that is neither too extreme, nor too low. Razor sharp focus and a tunnel vision approach is what you will get, without having to worry about any side effects.
+
+\n\nCreatine helps you maintain healthy and consistent levels of strength throughout your workout.
+
+\n\nL-arginine ensures you a greater pump as you workout and has also been shown to have a positive effect on endurance, sex-drive and libido. taurine will improve your athletic performance and L-Tyrosine plays a major role in neural stimulation.
+
+\n\nL-Leucine helps the muscles heal faster, prevents muscle breakdown under stress and helps increase muscle mass.
+
+\n\nSo now you know-that when it comes to working out, no half measures, no excuses are going to last, because you\'ve got BLAAST!
+
+\n\n<b>Suggested Use</b>-Mix 1 scoop of Blaast in 8-12 oz of water 20 minutes before your workout. Hardcore trainees who are accustomed to higher dosages of caffeine or other stimulants, can take 2 scoops.
+
+\n\n<b>DIETARY SUPPLEMENT </b>
+Keep only in the original container. Keep tightly closed. Store in a cool, dry and dark place. This admin is intended as a dietary supplement only. Do not use as a sole source of nutrition.
+
+\n\nUse within 18 months from the date of manufacturing.
+Use within 2 months after opening the jar.
+    </string>
+
+
+    <string name="pre3_code">HT-H-011</string>
+    <string name="pre3_name">Hercules Volts Isotonic Drink 1.0 kg / 2.2 Lbs Orange Flavour</string>
+    <string name="pre3_price">610</string>
+    <string name="pre3_flavour">Orange</string>
+    <string name="pre3_fat">0</string>
+    <string name="pre3_carbo">28.5</string>
+    <string name="pre3_proteins">0</string>
+    <string name="pre3_calories">117</string>
+    <string name="pre3_servings">33</string>
+    <string name="pre3_multiplier">12</string>
+    <string name="pre3_nutrional_facts">30</string>
+    <string name="pre3_desc"><b>VOLTS 117</b> gives you the right balance of Electrolytes such as Potassium, along with high energy imparting and revitalizing premix of Minerals &amp; Vitamins such as Calcium, Iron, Magnesium, Zinc, B– complex &amp; Vitamin-C etc, to prevent muscle cramps during workouts or whenever one is operating in hot and humid weather conditions.
+\n\n
+VOLTS 117 is a scientifically formulated formulation enriched with fatigue resistant and instantly energizing compounds such as BCCA’s, Glutamine and pure Dextrose Monohydrate, to answer your daily energy needs and prevent mild or extreme exhaustion/ dehydration from having performed any athletic/ cardiovascular/ gym activity. It helps to re-energize and re-invigorate your mind body and spirit in hot and humid conditions/climate.
+\n\n
+When taken with Creatine, it will maximize Creatine absorption in your body, ensuring increased muscle mass and strength.
+\n\n
+It also Increases the ability of your brain to focus and concentrate.
+\n\n
+        \n\n<b>Recommended use </b> – Consume 1 or 2 servings in 250ml water (6-8 fl. oz.) before and after workouts. Can be taken twice a day to ward off exhaustion/ dehydration in hot/ humid weather and conditions</string>
+
+
+    <string name="pre4_code">HT-H-010</string>
+    <string name="pre4_name">Hercules Volts Isotonic Drink 1.0 kg / 2.2 Lbs Pineapple Flavour</string>
+    <string name="pre4_price">610</string>
+    <string name="pre4_flavour">Pineapple</string>
+    <string name="pre4_fat">0</string>
+    <string name="pre4_carbo">28.5</string>
+    <string name="pre4_proteins">0</string>
+    <string name="pre4_calories">117</string>
+    <string name="pre4_servings">33</string>
+    <string name="pre4_multiplier">12</string>
+    <string name="pre4_nutrional_facts">30</string>
+    <string name="pre4_desc"><b>VOLTS 117</b> gives you the right balance of Electrolytes such as Potassium, along with high energy imparting and revitalizing premix of Minerals &amp; Vitamins such as Calcium, Iron, Magnesium, Zinc, B– complex &amp; Vitamin-C etc, to prevent muscle cramps during workouts or whenever one is operating in hot and humid weather conditions.
+\n\n
+VOLTS 117 is a scientifically formulated formulation enriched with fatigue resistant and instantly energizing compounds such as BCCA’s, Glutamine and pure Dextrose Monohydrate, to answer your daily energy needs and prevent mild or extreme exhaustion/ dehydration from having performed any athletic/ cardiovascular/ gym activity. It helps to re-energize and re-invigorate your mind body and spirit in hot and humid conditions/climate.
+\n\n
+When taken with Creatine, it will maximize Creatine absorption in your body, ensuring increased muscle mass and strength.
+\n\n
+It also Increases the ability of your brain to focus and concentrate.
+\n\n
+        \n\n<b>Recommended use </b> – Consume 1 or 2 servings in 250ml water (6-8 fl. oz.) before and after workouts. Can be taken twice a day to ward off exhaustion/ dehydration in hot/ humid weather and conditions</string>
+
+
+    <string name="pre5_code">HT-H-016</string>
+    <string name="pre5_name">HERCULES Rapid BCAA  350 g / 0.9 Lbs Fruit Punch</string>
+    <string name="pre5_price">1980</string>
+    <string name="pre5_flavour">Fruit Punch</string>
+    <string name="pre5_fat">2500</string>
+    <string name="pre5_carbo">1000</string>
+    <string name="pre5_proteins">1250</string>
+    <string name="pre5_calories">1250</string>
+    <string name="pre5_servings">30</string>
+    <string name="pre5_multiplier">3</string>
+    <string name="pre5_nutrional_facts">10</string>
+    <string name="pre5_desc"><b>Rapid BCAA’s</b> is a scientifically formulated combination of Branched Chain amino acids which enhanced performance and muscle recovery while working out. It facilitates and promotes muscle building and bone health by inducing muscle protein synthesis and promoting the production of growth hormone in your body. It prevents muscle breakdown when taken whilst working out, sparing the muscle while adding and facilitation fat loss.
+
+    \n\n<b>Directions for Use –</b> mix 1 scoop in 250-300 ml water. Consuming small sips during your strength workout sessions between the working sets or cardiovascular sessions provides the best results.
+
+    \n\n<b>Recommended Use -</b> as a dietary supplement mix one scoop per 250-500 ml of water (adjust for taste preferences). Shake well and consume during exercise on training days, or throughout the days on non-training days.
+\n\n
+    Use within 18 months from the date of manufacturing.
+\n\n
+    Use within 2 months after opening the jar.
+\n\n
+    *Percent Daily Value are based on a 2,000-calorie diet. Your Daily Values may be higher or lower depending on your calories needs.
+</string>
+
+
+    <string name="pre6_code">HT-H-017</string>
+    <string name="pre6_name">HERCULES Rapid BCAA  350 g / 0.9 Lbs Watermelon</string>
+    <string name="pre6_price">1980</string>
+    <string name="pre6_flavour">Watermelon</string>
+    <string name="pre6_fat">2500</string>
+    <string name="pre6_carbo">1000</string>
+    <string name="pre6_proteins">1250</string>
+    <string name="pre6_calories">1250</string>
+    <string name="pre6_servings">30</string>
+    <string name="pre6_multiplier">3</string>
+    <string name="pre6_nutrional_facts">10</string>
+    <string name="pre6_desc"><b>Rapid BCAA’s</b> is a scientifically formulated combination of Branched Chain amino acids which enhanced performance and muscle recovery while working out. It facilitates and promotes muscle building and bone health by inducing muscle protein synthesis and promoting the production of growth hormone in your body. It prevents muscle breakdown when taken whilst working out, sparing the muscle while adding and facilitation fat loss.
+
+\n\n<b>Directions for Use –</b> mix 1 scoop in 250-300 ml water. Consuming small sips during your strength workout sessions between the working sets or cardiovascular sessions provides the best results.
+
+\n\n<b>Recommended Use -</b> as a dietary supplement mix one scoop per 250-500 ml of water (adjust for taste preferences). Shake well and consume during exercise on training days, or throughout the days on non-training days.
+
+Use within 18 months from the date of manufacturing.
+
+Use within 2 months after opening the jar.
+
+*Percent Daily Value are based on a 2,000-calorie diet. Your Daily Values may be higher or lower depending on your calories needs.
+
+- Daily Values not established.</string>
+
+
+</resources>

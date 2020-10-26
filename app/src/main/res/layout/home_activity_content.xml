@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none"
+    android:background="@color/background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <GridLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/mainGrid"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!-- Row 1 -->
+
+        <!-- Column 1 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/orders"
+            app:cardBackgroundColor="@color/cardviewColor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="@dimen/card_view_radius"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/orders_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:scaleType="centerCrop"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/text_color"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:text="Orders"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/modal_text"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Column 2 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/customers"
+            app:cardBackgroundColor="@color/cardviewColor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="@dimen/card_view_radius"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/customers_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:scaleType="centerCrop"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:text="Customers"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/modal_text"
+                    android:textStyle="bold"  />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/trading"
+            app:cardBackgroundColor="@color/cardviewColor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="@dimen/card_view_radius"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/trading_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:scaleType="centerCrop"
+
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:text="Trading"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/modal_text"
+                    android:textStyle="bold"  />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/admin"
+            app:cardBackgroundColor="@color/cardviewColor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="@dimen/card_view_radius"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/admin_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:scaleType="centerCrop"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:text="Admin"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/modal_text"
+                    android:textStyle="bold"  />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/requests"
+            app:cardBackgroundColor="@color/cardviewColor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="@dimen/card_view_radius"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/preworkout"
+                    app:tint="@color/colorPrimaryDark" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:text="Requests"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/modal_text"
+                    android:textStyle="bold"   />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </GridLayout>
+
+</RelativeLayout>
+
+
+
+

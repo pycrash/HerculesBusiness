@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    app:cardCornerRadius="@dimen/card_view_radius"
+    app:cardPreventCornerOverlap="false"
+    app:cardBackgroundColor="@color/cardviewColor"
+    android:layout_alignParentTop="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/standard_margin"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ashutosh"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/page_titles"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/customer_phone"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+918569989966"
+                android:maxLines="2"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/secondary_text"/>
+            <TextView
+                android:id="@+id/customer_email"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ashutoshjha2285@gmail.com"
+                android:maxLines="2"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/secondary_text"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_color"
+                android:layout_marginTop="@dimen/less_padding"/>
+            <TextView
+                android:id="@+id/customer_address"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="012B Ashiana Gulmohar Park Bhiwdi rajsthan"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/secondary_text"/>
+            <TextView
+                android:id="@+id/customer_contact_name"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Name"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/secondary_text"/>
+            <TextView
+                android:id="@+id/customer_contact_number"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact no:"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/secondary_text"/>
+            <TextView
+                android:id="@+id/customer_gstin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GSTIN: 023457641"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/secondary_text"/>
+            <Button
+                android:id="@+id/send_leisure"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:drawableStart="@drawable/ic_baseline_send_24"
+                android:padding="@dimen/activity_vertical_margin"
+                android:drawablePadding="@dimen/activity_vertical_margin"
+                android:background="@drawable/rectangle_dark"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:drawableTint="@color/text_color"
+                android:textSize="@dimen/modal_text"
+                android:textStyle="bold"
+                android:text="Send Ledger"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color" />
+            <Button
+                android:id="@+id/send_SOL"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:drawableStart="@drawable/ic_baseline_send_24"
+                android:padding="@dimen/activity_vertical_margin"
+                android:drawablePadding="@dimen/activity_vertical_margin"
+                android:background="@drawable/rectangle_dark"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:drawableTint="@color/text_color"
+                android:textSize="@dimen/modal_text"
+                android:textStyle="bold"
+                android:text="Send SOL"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

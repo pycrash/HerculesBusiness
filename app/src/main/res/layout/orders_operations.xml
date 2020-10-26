@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/root"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:scrollbars="none">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:src="@drawable/back_arrow"
+        app:tint="@color/text_color" />
+
+
+    <TextView
+        android:id="@+id/info_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="Available Operations"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/page_titles"
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:id="@+id/mainGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/info_login"
+        android:layout_marginTop="20dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="true"
+        android:rowCount="2"
+        android:rowOrderPreserved="true">
+
+        <!-- Row 1 -->
+
+        <!-- Column 1 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/new_orders"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:cardBackgroundColor="@color/cardviewColor"
+            app:cardCornerRadius="@dimen/card_view_radius"
+            app:cardElevation="@dimen/cardview_default_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/orders_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_fiber_new_24"
+                    app:tint="@color/colorPrimaryDark" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/text_color" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:text="New Orders"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/modal_text"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Column 2 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pending_orders"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:cardBackgroundColor="@color/cardviewColor"
+            app:cardCornerRadius="@dimen/card_view_radius"
+            app:cardElevation="@dimen/cardview_default_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/customers_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pending"
+                    app:tint="@color/colorAccent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:text="Pending Orders"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/modal_text"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/completed_orders"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:cardBackgroundColor="@color/cardviewColor"
+            app:cardCornerRadius="@dimen/card_view_radius"
+            app:cardElevation="@dimen/cardview_default_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/trading_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_done_all_24"
+
+                    app:tint="@color/pink" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:text="Completed"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/modal_text"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/view_customer_orders"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:cardBackgroundColor="@color/cardviewColor"
+            app:cardCornerRadius="@dimen/card_view_radius"
+            app:cardElevation="@dimen/cardview_default_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_supervisor_account_24"
+                    app:tint="@color/colorPrimaryDark" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/text_color" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:text="Customer Orders"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/modal_text"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+</RelativeLayout>
