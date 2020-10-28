@@ -54,7 +54,7 @@ public class UpdateDiscountActivity extends AppCompatActivity {
     Button btnContinue;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     String customer_name, customer_phone;
-    int customer_discount;
+    double customer_discount;
     LinearLayout update_discount_linear;
     TextView customer_details, current_discount;
     boolean updateDiscount = false;
@@ -138,7 +138,7 @@ public class UpdateDiscountActivity extends AppCompatActivity {
                      AlertDialog alertDialog = builder.create();
                      alertDialog.show();
                     } else {
-                        updateDiscount(Integer.parseInt(discount.getText().toString().replaceAll("[^\\d]", "").trim()));
+                        updateDiscount(Double.parseDouble(discount.getText().toString().trim()));
                     }
                 } else {
                     checkEmailInDatabase();
@@ -165,7 +165,7 @@ public class UpdateDiscountActivity extends AppCompatActivity {
                     email.setEnabled(false);
                     customer_name = documentSnapshot.getString("name");
                     customer_phone = documentSnapshot.getString("phone");
-                    customer_discount = Math.toIntExact(documentSnapshot.getLong("discount"));
+                    customer_discount = documentSnapshot.getDouble("discount");
                     customer_details.setText("Name: " + customer_name + "\n" + "Phone: "+customer_phone);
                     current_discount.setText("Current Discount: "+ customer_discount +" %");
                     update_discount_linear.setVisibility(View.VISIBLE);
@@ -211,7 +211,7 @@ public class UpdateDiscountActivity extends AppCompatActivity {
         return false;
     }
 
-    private void updateDiscount(int discount) {
+    private void updateDiscount(double discount) {
         final ProgressDialog progressDialog = new ProgressDialog(UpdateDiscountActivity.this, R.style.ProgressDialog);
         progressDialog.setMessage("Updating discount .....");
         progressDialog.setCancelable(false);

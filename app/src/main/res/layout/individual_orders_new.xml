@@ -508,6 +508,40 @@
                         />
                 </LinearLayout>
 
+                    <TextView
+                        android:layout_marginTop="@dimen/standard_margin"
+                        android:id="@+id/new_order_cancel_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/modal_text"
+                        android:textColor="@color/red"
+                        android:visibility="gone"
+                        android:text="The customer has requested for cancellation"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/new_order_cancel"
+                            android:visibility="gone"
+                            android:layout_margin="@dimen/standard_margin"
+                            app:cardBackgroundColor="@color/colorPrimaryDark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cancel Order"
+                                android:textSize="@dimen/modal_text"
+                                android:padding="@dimen/standard_margin"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/white"/>
+                        </androidx.cardview.widget.CardView>
+
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/new_order_approve"
                     android:layout_margin="@dimen/standard_margin"
@@ -519,10 +553,10 @@
                         android:textAlignment="center"
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
+                        android:padding="@dimen/standard_margin"
                         android:layout_height="wrap_content"
                         android:text="Approve Order"
                         android:textSize="@dimen/modal_text"
-                        android:padding="@dimen/less_padding"
                         android:textStyle="bold"
                         android:textColor="@android:color/white"/>
                 </androidx.cardview.widget.CardView>

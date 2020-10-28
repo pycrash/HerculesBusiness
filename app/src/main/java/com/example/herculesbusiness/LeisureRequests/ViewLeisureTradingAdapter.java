@@ -79,6 +79,7 @@ public class ViewLeisureTradingAdapter extends RecyclerView.Adapter<ViewLeisureT
                     Intent intent = new Intent(context, UploadLeisureActivity.class);
                     intent.putExtra("name", customer.getMailingName().replaceAll(" ", ""));
                     intent.putExtra("email", customer.getEmail());
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     context.startActivity(intent);
                 }
             });

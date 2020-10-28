@@ -12,6 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service
+            android:name=".Service.ListenOrder"
+            android:enabled="true"
+            android:exported="true"></service>
 
         <activity android:name=".PendingOrders.DetailedPendingActivity" />
         <activity android:name=".ViewCustomer.OrdersViewCustomerActivity" />
@@ -21,7 +25,7 @@
         <activity android:name=".LeisureRequests.LeisureRequests" />
         <activity android:name=".SOLRequests.SOLRequestActivity" />
         <activity android:name=".LeisureRequests.UploadLeisureActivity" />
-        <activity android:name=".Orders.ViewCustomersOrdersActivity"/>
+        <activity android:name=".Orders.ViewCustomersOrdersActivity" />
         <activity android:name=".ViewCustomer.CustomerView" />
         <activity android:name=".SOLRequests.UploadSOLActivity" />
         <activity android:name=".Admin.AdminUpdate" />

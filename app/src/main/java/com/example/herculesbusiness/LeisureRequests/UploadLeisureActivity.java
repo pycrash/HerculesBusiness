@@ -30,6 +30,8 @@ import android.widget.Toast;
 import com.example.herculesbusiness.Adapters.ViewTradingAdapter;
 import com.example.herculesbusiness.Home.HomeActivity;
 import com.example.herculesbusiness.R;
+import com.example.herculesbusiness.SOLRequests.SOLRequestActivity;
+import com.example.herculesbusiness.SOLRequests.UploadSOLActivity;
 import com.example.herculesbusiness.Trading.TradingConstants;
 import com.example.herculesbusiness.Trading.UploadPDF;
 import com.example.herculesbusiness.utils.CheckInternetConnection;
@@ -92,7 +94,7 @@ public class UploadLeisureActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                startActivity(new Intent(UploadLeisureActivity.this, LeisureRequests.class));
                 finish();
                 handler.removeCallbacksAndMessages(null);
             }
@@ -319,7 +321,7 @@ public class UploadLeisureActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        startActivity(new Intent(UploadLeisureActivity.this, LeisureRequests.class));
         finish();
         handler.removeCallbacksAndMessages(null);
     }

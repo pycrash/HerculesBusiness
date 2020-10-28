@@ -8,6 +8,7 @@ public class OrderModel implements Serializable {
     private String orderID, date, name, phone, email, contactName, mailingName, contactNumber, gstin, discount, address, pincode, state, status;
     private String newTotal, total, notes;
     private List<Product> cart;
+    boolean cancelled;
 
     public String getNotes() {
         return notes;
@@ -17,9 +18,17 @@ public class OrderModel implements Serializable {
         this.notes = notes;
     }
 
+    public boolean isCancelled() {
+        return cancelled;
+    }
+
+    public void setCancelled(boolean cancelled) {
+        this.cancelled = cancelled;
+    }
+
     public OrderModel(String orderID, String date, String name, String phone, String email, String contactName, String mailingName,
                       String contactNumber, String gstin, String discount, String address, String pincode, String state,
-                      String status, String newTotal, String total, List<Product> cart, String notes) {
+                      String status, String newTotal, String total, List<Product> cart, String notes, boolean cancelled) {
         this.orderID = orderID;
         this.date = date;
         this.name = name;
@@ -38,6 +47,7 @@ public class OrderModel implements Serializable {
         this.total = total;
         this.cart = cart;
         this.notes = notes;
+        this.cancelled = cancelled;
     }
 
     public OrderModel() {

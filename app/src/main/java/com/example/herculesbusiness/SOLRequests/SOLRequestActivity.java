@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -19,7 +20,9 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
+import com.example.herculesbusiness.LeisureRequests.LeisureRequests;
 import com.example.herculesbusiness.R;
+import com.example.herculesbusiness.RequestsActivity;
 import com.example.herculesbusiness.ViewCustomer.Customer;
 import com.example.herculesbusiness.ViewCustomer.CustomerListLiveData;
 import com.example.herculesbusiness.ViewCustomer.CustomerListViewModel;
@@ -60,7 +63,7 @@ public class SOLRequestActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                startActivity(new Intent(SOLRequestActivity.this, RequestsActivity.class));
                 finish();
                 handler.removeCallbacksAndMessages(null);
             }
@@ -202,7 +205,7 @@ public class SOLRequestActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        startActivity(new Intent(SOLRequestActivity.this, RequestsActivity.class));
         finish();
         handler.removeCallbacksAndMessages(null);
     }

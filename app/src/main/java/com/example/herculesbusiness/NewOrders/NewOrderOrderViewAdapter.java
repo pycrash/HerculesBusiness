@@ -1,7 +1,9 @@
 package com.example.herculesbusiness.NewOrders;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,9 +40,9 @@ public class NewOrderOrderViewAdapter extends RecyclerView.Adapter<NewOrderOrder
     }
 
     class MyOrderHolder extends RecyclerView.ViewHolder {
-        public TextView orderid, date,name, contact_name,mailing_name, phone, contact_phone, address,state,
-                pincode,discount, amount, new_amount, status, gstin, email;
-        public CardView approve_order;
+        public TextView orderid, date, name, contact_name, mailing_name, phone, contact_phone, address, state,
+                pincode, discount, amount, new_amount, status, gstin, email, cancel_text;
+        public CardView approve_order, cancel_order;
         RecyclerView recyclerView;
 
 
@@ -63,14 +65,14 @@ public class NewOrderOrderViewAdapter extends RecyclerView.Adapter<NewOrderOrder
             gstin = itemView.findViewById(R.id.new_order_gstin);
             approve_order = itemView.findViewById(R.id.new_order_approve);
             recyclerView = itemView.findViewById(R.id.new_order_items_recycler_view);
-            email =  itemView.findViewById(R.id.new_order_email);
-
+            email = itemView.findViewById(R.id.new_order_email);
+            cancel_order = itemView.findViewById(R.id.new_order_cancel);
+            cancel_text = itemView.findViewById(R.id.new_order_cancel_text);
 
 
         }
 
     }
-
 
 
     @NonNull
@@ -100,15 +102,23 @@ public class NewOrderOrderViewAdapter extends RecyclerView.Adapter<NewOrderOrder
         holder.pincode.setText(listData.get(position).getPincode());
         holder.discount.setText(listData.get(position).getDiscount());
         holder.amount.setText(listData.get(position).getTotal());
-        holder.amount.setPaintFlags(holder.amount.getPaintFlags()| Paint.STRIKE_THRU_TEXT_FLAG);
+        holder.amount.setPaintFlags(holder.amount.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         holder.new_amount.setText(listData.get(position).getNewTotal());
         holder.gstin.setText(listData.get(position).getGstin());
         holder.recyclerView.setHasFixedSize(true);
         holder.recyclerView.setLayoutManager(new LinearLayoutManager(context));
 
-        ProductAdapter cartAdapter  = new ProductAdapter(listData.get(position).getCart(), context);
+        ProductAdapter cartAdapter = new ProductAdapter(listData.get(position).getCart(), context);
         holder.recyclerView.setAdapter(cartAdapter);
 
+        boolean cancel = listData.get(position).isCancelled();
+        if (cancel) {
+            holder.cancel_order.setVisibility(View.VISIBLE);
+            holder.cancel_text.setVisibility(View.VISIBLE);
+        } else {
+            holder.cancel_order.setVisibility(View.GONE);
+            holder.cancel_text.setVisibility(View.GONE);
+        }
         holder.approve_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,37 +127,39 @@ public class NewOrderOrderViewAdapter extends RecyclerView.Adapter<NewOrderOrder
                     Toast.makeText(context, "No Internet", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                ProgressDialog dialog = new ProgressDialog(context, R.style.ProgressDialog);
-                dialog.setMessage("Working on it !!");
-                dialog.setCancelable(false);
-                dialog.show();
-                OrderModel model = listData.get(position);
-                FirebaseDatabase db = FirebaseDatabase.getInstance();
+                if (cancel) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.MyAlertDialogStyle);
+                    builder.setCancelable(false);
+                    builder.setMessage("The user has requested for cancellation. Do you still want to approve this order ?");
+                    builder.setPositiveButton("Approve", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            approveOrder(position);
+                        }
+                    }).setNeutralButton("Cancel Order", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            cancelOrder(position);
+                        }
+                    });
+                    builder.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+                        }
+                    });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                } else {
+                    approveOrder(position);
+                }
 
-                DatabaseReference databaseReference = db.getReference("Requests").child("Pending Orders");
-                databaseReference.child(listData.get(position).getOrderID()).setValue(model);
-
-                Map<String, Object> user = new HashMap<>();
-                user.put("status", "Approved");
-                databaseReference = db.getReference(listData.get(position).getMailingName().replaceAll(" ", "")).child("Orders").child(listData.get(position).getOrderID());
-                databaseReference.updateChildren(user);
-
-                databaseReference = db.getReference("Requests").child("Pending Orders").child(listData.get(position).getOrderID());
-                databaseReference.updateChildren(user);
-
-                databaseReference = db.getReference("Requests").child("New Orders").child(listData.get(position).getOrderID());
-                databaseReference.removeValue();
-
-                databaseReference = db.getReference(listData.get(position).getMailingName().replaceAll(" ", "")).child("New Orders").child(listData.get(position).getOrderID());
-                databaseReference.removeValue();
-
-                databaseReference = db.getReference(listData.get(position).getMailingName().replaceAll(" ", "")).child("Pending Orders");
-                databaseReference.child(listData.get(position).getOrderID()).setValue(model);
-
-                databaseReference = db.getReference(listData.get(position).getMailingName().replaceAll(" ", "")).child("Pending Orders").child(listData.get(position).getOrderID());
-                databaseReference.updateChildren(user);
-                Toast.makeText(context, "Order Approved", Toast.LENGTH_SHORT).show();
-                dialog.hide();
+            }
+        });
+        holder.cancel_order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cancelOrder(position);
             }
         });
     }
@@ -157,4 +169,74 @@ public class NewOrderOrderViewAdapter extends RecyclerView.Adapter<NewOrderOrder
         return listData.size();
     }
 
+    public void approveOrder(int position) {
+        ProgressDialog dialog = new ProgressDialog(context, R.style.ProgressDialog);
+        dialog.setMessage("Working on it !!");
+        dialog.setCancelable(false);
+        dialog.show();
+        OrderModel model = listData.get(position);
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+
+        DatabaseReference databaseReference = db.getReference("Requests").child("Pending Orders");
+        databaseReference.child(listData.get(position).getOrderID()).setValue(model);
+
+        Map<String, Object> user = new HashMap<>();
+        user.put("status", "Approved");
+        databaseReference = db.getReference(listData.get(position).getMailingName().replaceAll(" ", "")).child("Orders").child(listData.get(position).getOrderID());
+        databaseReference.updateChildren(user);
+
+        databaseReference = db.getReference("Requests").child("Pending Orders").child(listData.get(position).getOrderID());
+        databaseReference.updateChildren(user);
+
+        databaseReference = db.getReference("Requests").child("New Orders").child(listData.get(position).getOrderID());
+        databaseReference.removeValue();
+
+        databaseReference = db.getReference(listData.get(position).getMailingName().replaceAll(" ", "")).child("New Orders").child(listData.get(position).getOrderID());
+        databaseReference.removeValue();
+
+        databaseReference = db.getReference(listData.get(position).getMailingName().replaceAll(" ", "")).child("Pending Orders");
+        databaseReference.child(listData.get(position).getOrderID()).setValue(model);
+
+        databaseReference = db.getReference(listData.get(position).getMailingName().replaceAll(" ", "")).child("Pending Orders").child(listData.get(position).getOrderID());
+        databaseReference.updateChildren(user);
+        Toast.makeText(context, "Order Approved", Toast.LENGTH_SHORT).show();
+        dialog.hide();
+    }
+
+    public void cancelOrder(int position) {
+        ProgressDialog dialog = new ProgressDialog(context, R.style.ProgressDialog);
+        dialog.setMessage("Cancelling Order");
+        dialog.setCancelable(false);
+        dialog.show();
+        OrderModel model = listData.get(position);
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+
+        DatabaseReference databaseReference = db.getReference("Requests").child("Completed Orders");
+        databaseReference.child(listData.get(position).getOrderID()).setValue(model);
+
+        Map<String, Object> user = new HashMap<>();
+        user.put("status", "Cancelled");
+        user.put("notes", "The order has been cancelled !!");
+
+
+        databaseReference = db.getReference(listData.get(position).getMailingName().replaceAll(" ", "")).child("Orders").child(listData.get(position).getOrderID());
+        databaseReference.updateChildren(user);
+
+        databaseReference = db.getReference("Requests").child("Completed Orders").child(listData.get(position).getOrderID());
+        databaseReference.updateChildren(user);
+
+        databaseReference = db.getReference("Requests").child("New Orders").child(listData.get(position).getOrderID());
+        databaseReference.removeValue();
+
+        databaseReference = db.getReference(listData.get(position).getMailingName().replaceAll(" ", "")).child("New Orders").child(listData.get(position).getOrderID());
+        databaseReference.removeValue();
+
+        databaseReference = db.getReference(listData.get(position).getMailingName().replaceAll(" ", "")).child("Completed Orders");
+        databaseReference.child(listData.get(position).getOrderID()).setValue(model);
+
+        databaseReference = db.getReference(listData.get(position).getMailingName().replaceAll(" ", "")).child("Completed Orders").child(listData.get(position).getOrderID());
+        databaseReference.updateChildren(user);
+        Toast.makeText(context, "Order Cancelled", Toast.LENGTH_SHORT).show();
+        dialog.hide();
+    }
 }

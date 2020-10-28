@@ -78,7 +78,9 @@ public class ViewSOLTradingAdapter extends RecyclerView.Adapter<ViewSOLTradingAd
                     Intent intent = new Intent(context, UploadSOLActivity.class);
                     intent.putExtra("name", customer.getMailingName().replaceAll(" ", ""));
                     intent.putExtra("email", customer.getEmail());
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     context.startActivity(intent);
+
                 }
             });
 

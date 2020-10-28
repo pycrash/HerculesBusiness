@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
@@ -26,8 +28,8 @@ import java.util.Map;
 
 public class DetailedNewOrderActivity extends AppCompatActivity {
     public TextView orderid, date, name, contact_name, mailing_name, phone, contact_phone, address, state,
-            pincode, discount, amount, new_amount, gstin, email;
-    public CardView done_order, approve;
+            pincode, discount, amount, new_amount, gstin, email, text_view_cancel;
+    public CardView done_order, approve, cancel;
     RecyclerView recyclerView;
     TextView status;
 
@@ -67,6 +69,9 @@ public class DetailedNewOrderActivity extends AppCompatActivity {
         email = findViewById(R.id.new_order_email);
         status = findViewById(R.id.pending_order_status);
         approve = findViewById(R.id.approve);
+        cancel = findViewById(R.id.cancel);
+        cancel.setVisibility(View.GONE);
+        text_view_cancel = findViewById(R.id.text_cancellation);
 
 
         orderid.setText(pendingOrderModel.getOrderID());
@@ -86,6 +91,7 @@ public class DetailedNewOrderActivity extends AppCompatActivity {
         new_amount.setText(pendingOrderModel.getNewTotal());
         gstin.setText(pendingOrderModel.getGstin());
         status.setText(pendingOrderModel.getStatus());
+        boolean cancel_order = pendingOrderModel.isCancelled();
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(DetailedNewOrderActivity.this));
         ProductAdapter cartAdapter = new ProductAdapter(pendingOrderModel.getCart(), DetailedNewOrderActivity.this);
@@ -98,6 +104,13 @@ public class DetailedNewOrderActivity extends AppCompatActivity {
 
             }
         });
+        if (cancel_order) {
+            cancel.setVisibility(View.VISIBLE);
+            text_view_cancel.setVisibility(View.VISIBLE);
+        } else {
+            cancel.setVisibility(View.GONE);
+            text_view_cancel.setVisibility(View.GONE);
+        }
 
         approve.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,42 +120,108 @@ public class DetailedNewOrderActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "No Internet", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                ProgressDialog dialog = new ProgressDialog(DetailedNewOrderActivity.this, R.style.ProgressDialog);
-                dialog.setMessage("Working on it !!");
-                dialog.setCancelable(false);
-                dialog.show();
-                OrderModel pendingOrderModel = (OrderModel) getIntent().getSerializableExtra("orderDetails");
-                FirebaseDatabase db = FirebaseDatabase.getInstance();
-
-
-                DatabaseReference databaseReference = db.getReference("Requests").child("Pending Orders");
-                databaseReference.child(orderid.getText().toString()).setValue(pendingOrderModel);
-
-                Map<String, Object> user = new HashMap<>();
-                user.put("status", "Approved");
-                databaseReference = db.getReference(mailing_name.getText().toString().replaceAll(" ", "")).child("Orders").child(orderid.getText().toString());
-                databaseReference.updateChildren(user);
-
-                 databaseReference = db.getReference("Requests").child("Pending Orders").child(orderid.getText().toString());
-                databaseReference.updateChildren(user);
-
-                databaseReference = db.getReference("Requests").child("New Orders").child(orderid.getText().toString());
-                databaseReference.removeValue();
-
-                databaseReference = db.getReference(mailing_name.getText().toString().replaceAll(" ", "")).child("New Orders").child(orderid.getText().toString());
-                databaseReference.removeValue();
-
-                databaseReference = db.getReference(mailing_name.getText().toString().replaceAll(" ", "")).child("Pending Orders");
-                databaseReference.child(orderid.getText().toString()).setValue(pendingOrderModel);
-
-                databaseReference = db.getReference(mailing_name.getText().toString().replaceAll(" ", "")).child("Pending Orders").child(orderid.getText().toString());
-                databaseReference.updateChildren(user);
-
-                Toast.makeText(getApplicationContext(), "Order Approved", Toast.LENGTH_SHORT).show();
-                dialog.hide();
-                onBackPressed();
-                finish();
+                if (cancel_order) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(DetailedNewOrderActivity.this, R.style.MyAlertDialogStyle);
+                    builder.setCancelable(false);
+                    builder.setMessage("The user has requested for cancellation. Do you still want to approve this order ?");
+                    builder.setPositiveButton("Approve", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            approveOrder();                        }
+                    }).setNeutralButton("Cancel Order", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            cancelOrder();
+                        }
+                    });
+                    builder.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+                        }
+                    });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                } else {
+                    approveOrder();
+                }
             }
         });
+    }
+    public void approveOrder() {
+        ProgressDialog dialog = new ProgressDialog(DetailedNewOrderActivity.this, R.style.ProgressDialog);
+        dialog.setMessage("Working on it !!");
+        dialog.setCancelable(false);
+        dialog.show();
+        OrderModel pendingOrderModel = (OrderModel) getIntent().getSerializableExtra("orderDetails");
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+
+
+        DatabaseReference databaseReference = db.getReference("Requests").child("Pending Orders");
+        databaseReference.child(orderid.getText().toString()).setValue(pendingOrderModel);
+
+        Map<String, Object> user = new HashMap<>();
+        user.put("status", "Approved");
+        databaseReference = db.getReference(mailing_name.getText().toString().replaceAll(" ", "")).child("Orders").child(orderid.getText().toString());
+        databaseReference.updateChildren(user);
+
+        databaseReference = db.getReference("Requests").child("Pending Orders").child(orderid.getText().toString());
+        databaseReference.updateChildren(user);
+
+        databaseReference = db.getReference("Requests").child("New Orders").child(orderid.getText().toString());
+        databaseReference.removeValue();
+
+        databaseReference = db.getReference(mailing_name.getText().toString().replaceAll(" ", "")).child("New Orders").child(orderid.getText().toString());
+        databaseReference.removeValue();
+
+        databaseReference = db.getReference(mailing_name.getText().toString().replaceAll(" ", "")).child("Pending Orders");
+        databaseReference.child(orderid.getText().toString()).setValue(pendingOrderModel);
+
+        databaseReference = db.getReference(mailing_name.getText().toString().replaceAll(" ", "")).child("Pending Orders").child(orderid.getText().toString());
+        databaseReference.updateChildren(user);
+
+        Toast.makeText(getApplicationContext(), "Order Approved", Toast.LENGTH_SHORT).show();
+        dialog.hide();
+        onBackPressed();
+        finish();
+    }
+    public void cancelOrder() {
+        ProgressDialog dialog = new ProgressDialog(DetailedNewOrderActivity.this, R.style.ProgressDialog);
+        dialog.setMessage("Cancelling Order !!");
+        dialog.setCancelable(false);
+        dialog.show();
+        OrderModel pendingOrderModel = (OrderModel) getIntent().getSerializableExtra("orderDetails");
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+
+
+        DatabaseReference databaseReference = db.getReference("Requests").child("Completed Orders");
+        databaseReference.child(orderid.getText().toString()).setValue(pendingOrderModel);
+
+        Map<String, Object> user = new HashMap<>();
+        user.put("status", "Cancelled");
+        user.put("notes", "The order has been cancelled");
+
+        databaseReference = db.getReference(mailing_name.getText().toString().replaceAll(" ", "")).child("Orders").child(orderid.getText().toString());
+        databaseReference.updateChildren(user);
+
+        databaseReference = db.getReference("Requests").child("Completed Orders").child(orderid.getText().toString());
+        databaseReference.updateChildren(user);
+
+        databaseReference = db.getReference("Requests").child("New Orders").child(orderid.getText().toString());
+        databaseReference.removeValue();
+
+        databaseReference = db.getReference(mailing_name.getText().toString().replaceAll(" ", "")).child("New Orders").child(orderid.getText().toString());
+        databaseReference.removeValue();
+
+        databaseReference = db.getReference(mailing_name.getText().toString().replaceAll(" ", "")).child("Completed Orders");
+        databaseReference.child(orderid.getText().toString()).setValue(pendingOrderModel);
+
+        databaseReference = db.getReference(mailing_name.getText().toString().replaceAll(" ", "")).child("Completed Orders").child(orderid.getText().toString());
+        databaseReference.updateChildren(user);
+
+        Toast.makeText(getApplicationContext(), "Order Cancelled", Toast.LENGTH_SHORT).show();
+        dialog.hide();
+        onBackPressed();
+        finish();
     }
 }
