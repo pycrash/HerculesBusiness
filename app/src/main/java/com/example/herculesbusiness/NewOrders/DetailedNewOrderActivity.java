@@ -1,10 +1,10 @@
 package com.example.herculesbusiness.NewOrders;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -17,14 +17,28 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.herculesbusiness.Adapters.ProductAdapter;
+import com.example.herculesbusiness.Models.Common;
+import com.example.herculesbusiness.Models.DataMessage;
+import com.example.herculesbusiness.Models.MyResponse;
+import com.example.herculesbusiness.Models.Notification;
 import com.example.herculesbusiness.Models.OrderModel;
+import com.example.herculesbusiness.Models.Sender;
+import com.example.herculesbusiness.Models.Token;
 import com.example.herculesbusiness.R;
+import com.example.herculesbusiness.Remote.APIService;
 import com.example.herculesbusiness.utils.CheckInternetConnection;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class DetailedNewOrderActivity extends AppCompatActivity {
     public TextView orderid, date, name, contact_name, mailing_name, phone, contact_phone, address, state,
@@ -32,6 +46,7 @@ public class DetailedNewOrderActivity extends AppCompatActivity {
     public CardView done_order, approve, cancel;
     RecyclerView recyclerView;
     TextView status;
+    APIService apiService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +62,8 @@ public class DetailedNewOrderActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        apiService = Common.getFCMService();
 
         OrderModel pendingOrderModel = (OrderModel) getIntent().getSerializableExtra("orderDetails");
         orderid = findViewById(R.id.new_order_id);
@@ -180,11 +197,49 @@ public class DetailedNewOrderActivity extends AppCompatActivity {
         databaseReference = db.getReference(mailing_name.getText().toString().replaceAll(" ", "")).child("Pending Orders").child(orderid.getText().toString());
         databaseReference.updateChildren(user);
 
-        Toast.makeText(getApplicationContext(), "Order Approved", Toast.LENGTH_SHORT).show();
         dialog.hide();
+        sendOrderStatusToUser(pendingOrderModel);
         onBackPressed();
         finish();
     }
+
+    private void sendOrderStatusToUser(OrderModel pendingOrderModel) {
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Tokens");
+        databaseReference.orderByKey().equalTo(pendingOrderModel.getPhone())
+        .addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+                    Token serverToken = postSnapshot.getValue(Token.class);
+                    Notification notification = new Notification("Hercules", "You have new order : "+ pendingOrderModel.getOrderID());
+                    Sender content = new Sender(serverToken.getToken(), notification);
+                    apiService.sendNotification(content)
+                            .enqueue(new Callback<MyResponse>() {
+                                @Override
+                                public void onResponse(Call<MyResponse> call, Response<MyResponse> response) {
+                                    if (response.body().success == 1) {
+                                        Toast.makeText(getApplicationContext(), "Order Placed", Toast.LENGTH_SHORT).show();
+
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), "Failed !!", Toast.LENGTH_SHORT).show();
+
+                                    }
+                                }
+
+                                @Override
+                                public void onFailure(Call<MyResponse> call, Throwable t) {
+                                }
+                            });
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
     public void cancelOrder() {
         ProgressDialog dialog = new ProgressDialog(DetailedNewOrderActivity.this, R.style.ProgressDialog);
         dialog.setMessage("Cancelling Order !!");

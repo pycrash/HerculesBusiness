@@ -35,6 +35,7 @@ import com.example.herculesbusiness.Customers.UpdatePasswordActivity;
 import com.example.herculesbusiness.LeisureRequests.LeisureRequests;
 import com.example.herculesbusiness.Login.LoginActivity;
 import com.example.herculesbusiness.CompletedOrders.CompletedOrdersActivity;
+import com.example.herculesbusiness.Models.Token;
 import com.example.herculesbusiness.NewOrders.NewOrdersActivity;
 import com.example.herculesbusiness.Orders.OrdersOperationActivity;
 import com.example.herculesbusiness.PendingOrders.PendingOrdersActivity;
@@ -45,6 +46,10 @@ import com.example.herculesbusiness.ViewCustomer.CustomerView;
 import com.example.herculesbusiness.ViewCustomer.ViewCustomerActivity;
 import com.example.herculesbusiness.utils.LoadImagesInBitmap;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.FirebaseInstanceIdService;
 import com.orhanobut.hawk.Hawk;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -188,8 +193,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         });
 
         setupHeaderView();
+
+        //send Token
+        updateToken(FirebaseInstanceId.getInstance().getToken());
     }
 
+    private void updateToken(String token) {
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = db.getReference("Tokens");
+        Token data = new Token(token, true);
+        Hawk.init(getApplicationContext()).build();
+        databaseReference.child(Hawk.get("phone")).setValue(data);
+    }
 
 
     @Override

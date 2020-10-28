@@ -1,5 +1,6 @@
 package com.example.herculesbusiness.PendingOrders;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,6 +11,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,13 +20,27 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.herculesbusiness.Adapters.ProductAdapter;
+import com.example.herculesbusiness.Models.Common;
+import com.example.herculesbusiness.Models.DataMessage;
+import com.example.herculesbusiness.Models.MyResponse;
+import com.example.herculesbusiness.Models.Notification;
 import com.example.herculesbusiness.Models.OrderModel;
+import com.example.herculesbusiness.Models.Sender;
+import com.example.herculesbusiness.Models.Token;
 import com.example.herculesbusiness.R;
+import com.example.herculesbusiness.Remote.APIService;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class DetailedPendingActivity extends AppCompatActivity {
     public TextView orderid, date, name, contact_name, mailing_name, phone, contact_phone, address, state,
@@ -37,6 +53,9 @@ public class DetailedPendingActivity extends AppCompatActivity {
     AlertDialog alertDialog = null;
     int position = 10;
     CharSequence[] values;
+    APIService apiService;
+
+    private static final String TAG = "DetailedPendingOrder";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +71,8 @@ public class DetailedPendingActivity extends AppCompatActivity {
                 finish();
             }
         });
+        apiService = Common.getFCMService();
+
         pendingOrderModel = (OrderModel) getIntent().getSerializableExtra("orderDetails");
         orderid = findViewById(R.id.new_order_id);
         date = findViewById(R.id.new_order_date);
@@ -149,6 +170,7 @@ public class DetailedPendingActivity extends AppCompatActivity {
                 databaseReference.updateChildren(user);
 
                 Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+                sendOrderStatusToUser(pendingOrderModel,"Your order " + pendingOrderModel.getOrderID() + " was completed");
                 progressDialog.hide();
                 onBackPressed();
                 finish();
@@ -194,6 +216,7 @@ public class DetailedPendingActivity extends AppCompatActivity {
                     databaseReference.updateChildren(user);
 
                     progressDialog.hide();
+                    sendOrderStatusToUser(pendingOrderModel,"Your order " + pendingOrderModel.getOrderID() + " was "+ values[position]);
                     Toast.makeText(getApplicationContext(), "Updated", Toast.LENGTH_SHORT).show();
                     status.setText(values[position]);
                 }
@@ -283,6 +306,7 @@ public class DetailedPendingActivity extends AppCompatActivity {
 
                     progressDialog.hide();
                     addNotes.setText(mPassword.getText().toString());
+                    sendOrderStatusToUser(pendingOrderModel, "Seller has added notes to your order " + pendingOrderModel.getOrderID());
                     Toast.makeText(getApplicationContext(), "Updated", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -295,4 +319,50 @@ public class DetailedPendingActivity extends AppCompatActivity {
             }
         });
     }
+    private void sendOrderStatusToUser(OrderModel pendingOrderModel, String message) {
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Tokens");
+        databaseReference.orderByKey().equalTo(pendingOrderModel.getPhone())
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+//                            Notification notification = new Notification("Hercules",  message);
+//                            Sender content = new Sender(serverToken.getToken(), notification);
+
+//                            Map<String , String> dataSend = new HashMap<>();
+//                            dataSend.put("title", "Hercules");
+//                            dataSend.put("message", message);
+//                            DataMessage dataMessage = new DataMessage(serverToken.getToken(), dataSend);
+                            Token serverToken = postSnapshot.getValue(Token.class);
+                            Notification notification = new Notification("Hercules", "You order with "+pendingOrderModel.getOrderID() + " is approved");
+                            Sender content = new Sender(serverToken.getToken(), notification);
+
+                            apiService.sendNotification(content)
+                                    .enqueue(new Callback<MyResponse>() {
+                                        @Override
+                                        public void onResponse(Call<MyResponse> call, Response<MyResponse> response) {
+                                            if (response.body().success == 1) {
+                                                Toast.makeText(getApplicationContext(), "Order Updated", Toast.LENGTH_SHORT).show();
+
+                                            } else {
+                                                Toast.makeText(getApplicationContext(), "Order was updated but failed to send Notification !!", Toast.LENGTH_LONG).show();
+
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onFailure(Call<MyResponse> call, Throwable t) {
+                                            Log.d(TAG, "onFailure: " + t);
+                                        }
+                                    });
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+    }
+
 }
